@@ -1,3 +1,7 @@
+javaTpoint.com
+---------------------------
+github link:- https://github.com/sandipmohapatra/OrissaBatch7am
+-----------------------
 Fullstack (frontend,middleware,backend)
 ---------------------------------------
 html,css,javascript,bootstrap
@@ -22,10 +26,46 @@ Mongodb
 ---------------------------------------------------------------------------------------------------------------------
 Angular10,spring boot,micro-service.
 ----------------------------------------------------
-
-
-
-
+example-1
+--------------------
+second?t1=sandip&t2=776655443&t3=bangalore&t4=sandip%40gmail.com&t5=1st+july+1980&t6=SVT
+second.java ----middle ware
+if you want you can store into the database.
+----------------------------------------------------------------------------------------------------------
+<center>---It is used to align the text center.
+<left>
+<right>
+--------------------------------------------
+<h1> ---it is a heading tag .we have <h1> to <h6>
+-------------------------------------------------------
+<hr>  ---It is a horizontal line .
+---------------------------------------
+<body>------This is body of the html page.
+<body bgcolor>-----This is the background of the page.
+--------------------------------------
+<form>:- This is to link your page with the middleware.
+This will make the html static page into dynamic page.
+-----------------------------------------------------------------------
+<table>
+<tr><td>
+----------------------------------------------
+<html>
+<body bgcolor=cyan>
+<h1><center>Student's Registration Form</center></h1><hr color=red><hr color=blue>
+<form action=second>
+<table border=2>
+<tr><td>Enter your name<td><input type=text name=t1 size=20 required></tr>
+<tr><td>Enter your phone no<td><input type=number name=t2 size=20 required></tr>
+<tr><td>Enter your address<td><input type=text name=t3 size=20 required></tr>
+<tr><td>Enter your email<td><input type=email name=t4 size=20 required></tr>
+<tr><td>Enter your DOB<td><input type=date name=t5 size=20 required></tr>
+<tr><td>Enter your College<td><input type=text name=t6 size=20 required></tr>
+<tr><td><td><input type=submit value=submit></tr>
+</table>
+</form>
+</body>
+</html>
+-------------------------------------------------------
 
 
 
