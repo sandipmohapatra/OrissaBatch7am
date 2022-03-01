@@ -1,0 +1,31 @@
+Fullstack (frontend,middleware,backend)
+---------------------------------------
+html,css,javascript,bootstrap
+-------------------------
+angular 10
+--------------------
+core-java-1.8
+JDBC
+Hibernate
+servlet
+Jsp
+spring,JPA
+Rest-webservice
+spring boot
+micro-service
+----------------------
+oracle
+MySql
+Mongodb
+---------------------------4 hours--------------------
+3 months---javaTpoint---html,css,javascript,bootstrap,spring,hibernate,corejava,servlet,jsp
+---------------------------------------------------------------------------------------------------------------------
+Angular10,spring boot,micro-service.
+----------------------------------------------------
+
+
+
+
+
+
+
