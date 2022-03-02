@@ -125,5 +125,16 @@ select :- Drop down option.
 
 file:///C:/Users/sandip/Desktop/Orissa-7am/second?t1=sandip&t2=7766554433&t3=bangalore&t4=sandip%40gmail.com&t5=2022-02-28&t6=SVT&t7=male&t8=cricket&t12=India
 ---------------------------------------------------------------------------------------------------------------------------
+Hyperlink :-
+--------------
+When you press the link it will redirect to the mentioned page.
+<a href=second.html>My second Page</a>
 
+-----------------------------------------------------------------------------------
+Angular js is a combination of  html,css,javascript,bootstrap.
+we develop in angular because :- the processing is fast.example :- watching cricket match online criczbuzz.com
+It will not reload the whole page or refresh the whole page.
+If it is made with html,css,js then it will take long time to reload.  
 
+In angular only the part which is modified will only refresh.like the score part,or commentry part.
+Angular is used to create responsive webpages.(big screen to small mobile screen the picture will fit.)
