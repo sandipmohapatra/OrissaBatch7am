@@ -1,13 +1,16 @@
-javaTpoint.com
+7760213015----sandip
+sandip7760213015@gmail.com
+--------------------------------------
+www.javaTpoint.com
 ---------------------------
 github link:- https://github.com/sandipmohapatra/OrissaBatch7am
------------------------
-Fullstack (frontend,middleware,backend)
----------------------------------------
+----------------Frontend----------------------------------
+Fullstack java development(frontend,middleware,backend)
+-------------------------------------------------------------
 html,css,javascript,bootstrap
--------------------------
-angular 10
---------------------
+----------------------------------------
+angular 10<------------------------
+---------------Middleware -----------------------------------
 core-java-1.8
 JDBC
 Hibernate
@@ -17,11 +20,11 @@ spring,JPA
 Rest-webservice
 spring boot
 micro-service
-----------------------
+-----------Backend ---------------------------------
 oracle
 MySql
 Mongodb
----------------------------4 hours--------------------
+---------------------------Extra work 4 hours--------------------
 3 months---javaTpoint---html,css,javascript,bootstrap,spring,hibernate,corejava,servlet,jsp
 ---------------------------------------------------------------------------------------------------------------------
 Angular10,spring boot,micro-service.
@@ -31,24 +34,29 @@ example-1
 second?t1=sandip&t2=776655443&t3=bangalore&t4=sandip%40gmail.com&t5=1st+july+1980&t6=SVT
 second.java ----middle ware
 if you want you can store into the database.
-----------------------------------------------------------------------------------------------------------
+-------------------------------------------------------HTML---------------------------------------------------
 <center>---It is used to align the text center.
 <left>
 <right>
---------------------------------------------
+----------------------------------------------------------------------------------
 <h1> ---it is a heading tag .we have <h1> to <h6>
--------------------------------------------------------
+-------------------------------------------------------------------------------------
 <hr>  ---It is a horizontal line .
----------------------------------------
+<hr color=red>-----we can give color to horizontal line.
+-------------------------------------------------------------------------------------------
+<html>----------starting tag of HTML.It is not case sensetive.It is user friendly.
 <body>------This is body of the html page.
-<body bgcolor>-----This is the background of the page.
---------------------------------------
-<form>:- This is to link your page with the middleware.
+<title></title>-----This is to give title to the page.
+<body bgcolor>-----This is the background color of the page.
+-------------------------------------------------------------------------------------------------
+<form>:- This is to link your page with the middleware.(servlet,jsp)
 This will make the html static page into dynamic page.
------------------------------------------------------------------------
-<table>
-<tr><td>
-----------------------------------------------
+---------------------------------------------------------------------------------------------------
+<table> :- This is used to display data in tabular format.we have rows and column.
+example:-
+<tr><td>Enter your name<td><input type=text name=t1 size=20 required></tr>
+
+--------------------------------------------------------------------------------------------------------------
 <html>
 <body bgcolor=cyan>
 <h1><center>Student's Registration Form</center></h1><hr color=red><hr color=blue>
@@ -65,7 +73,35 @@ This will make the html static page into dynamic page.
 </form>
 </body>
 </html>
--------------------------------------------------------
+--------------------------------------------------------------------------------
+<tr><td>Enter your name<td><input type=text name=t1 size=20 required></tr>
+<td>Enter your name <-----label
+<input type=text name=t1 size=20 required>  <------------textfield
+name=t1 <----It is used to bind the data.t1 is a variable.
+size=20  <-----It is the size of the text field.
+required  <------------It is compulsury to enter the data.we cannot leave the field empty.
+without entering the data we cannot submit the form.
+placeholder="enter your name"  <-----to display the message.
+--------------------------------------------------------------------------------
 
+second?t1=sandip&t2=7766554433&t3=bangalore&t4=sandip%40gmail.com&t5=2022-03-02&t6=SVT&t7=male
+
+second is the middleware and others are the parameter.
+t1,t2,t3........(variables given names to the text fields,radio button etc. to bind the data which we enter.)
+It is used to bind the data and carry to the middleware.
+---------------------------------------------------------------------------------------------
+radio button:-It is used to select any one option.
+-----------------------
+Female<input type=radio name=t7 value=female>
+------------------------
+checkbox:-it is used to select multiple options.
+Cricket<input type=checkbox name=t8 value=cricket>
+-----------------------------------------------------------------
+file:///C:/Users/sandip/Desktop/Orissa-7am/second?t1=sandip&t2=7766554433&t3=bangalore&t4=sandip%40gmail.com&t5=2022-03-02&t6=SVT&t7=male&t8=cricket&t9=football&t10=hockey&t11=ludo
+----------------------------------------------------------------------------------------
+select :- Drop down option.
+
+file:///C:/Users/sandip/Desktop/Orissa-7am/second?t1=sandip&t2=7766554433&t3=bangalore&t4=sandip%40gmail.com&t5=2022-02-28&t6=SVT&t7=male&t8=cricket&t12=India
+---------------------------------------------------------------------------------------------------------------------------
 
 
