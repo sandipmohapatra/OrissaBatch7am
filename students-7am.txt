@@ -49,7 +49,7 @@ if you want you can store into the database.
 <title></title>-----This is to give title to the page.
 <body bgcolor>-----This is the background color of the page.
 -------------------------------------------------------------------------------------------------
-<form>:- This is to link your page with the middleware.(servlet,jsp)
+<form action=second>:- This is to link your page with the middleware.(servlet,jsp)
 This will make the html static page into dynamic page.
 ---------------------------------------------------------------------------------------------------
 <table> :- This is used to display data in tabular format.we have rows and column.
@@ -128,8 +128,12 @@ file:///C:/Users/sandip/Desktop/Orissa-7am/second?t1=sandip&t2=7766554433&t3=ban
 Hyperlink :-
 --------------
 When you press the link it will redirect to the mentioned page.
-<a href=second.html>My second Page</a>
+<br><br><a href=second.html>My Login Page</a>
 
+<br><br><a href=First.html>My Registration Page</a>
+
+a is the anchor tag.
+<br> is to goto the next line.
 -----------------------------------------------------------------------------------
 Angular js is a combination of  html,css,javascript,bootstrap.
 we develop in angular because :- the processing is fast.example :- watching cricket match online criczbuzz.com
@@ -138,3 +142,68 @@ If it is made with html,css,js then it will take long time to reload.
 
 In angular only the part which is modified will only refresh.like the score part,or commentry part.
 Angular is used to create responsive webpages.(big screen to small mobile screen the picture will fit.)
+---------------------------------------------------------
+example-1
+what is the use of Form action?
+First.html
+------------------------
+<html>
+<body bgcolor=yellow>
+<h1><center>Student Registration Page</center></h1><hr color=cyan><hr color=red>
+<form action=second.jsp>
+<table>
+<tr><td>Enter your name<td><input type=text name=t1 size=20></tr>
+<tr><td>Enter your phoneno<td><input type=text name=t2 size=20></tr>
+<tr><td>Enter your email<td><input type=text name=t3 size=20></tr>
+<tr><td>Enter your address<td><input type=text name=t4 size=20></tr>
+<tr><td><td><input type=submit value=submit></tr>
+</table>
+</form>
+</body>
+</html>
+-------------------------------------------------------------------------
+second.jsp
+-----------------------
+<% String a=request.getParameter("t1");
+String b=request.getParameter("t2");
+String c=request.getParameter("t3");
+String d=request.getParameter("t4");%>
+
+<%out.println("The name is "+a);
+out.println("The phoneno is "+b);
+out.println("The email is "+c);
+out.println("The address is "+d);%>
+-------------------------------------------------------------------------------------------------
+http://localhost:8088/BinayProject/second.jsp?t1=Binay&t2=7766554433&t3=binay%40gmail.com&t4=BBHR
+-------------------------------------------------------------------------------------------------
+hyperlink ---------It will link to a new page.
+when we develop a project we have 10 pages .They are linked with each other using hyperlink.
+home,contact,about us,services,register.
+-------------------------------------------------------------------
+home.html
+contact.html
+aboutus.html
+services.html
+register.html
+------------------------------------------------------------
+home.html
+<a href=contact.html>Contact</a>
+<a href=aboutus.html>About us</a>
+<a href=services.html>Services</a>
+<a href=registration.html>Registration</a>
+---------------------------------------------------------------------
+By hyperlink we don't have to open each pages separately.
+----------------------------------------------------------------------------------
+<div> ---Inside div tag we can have different tags also.
+--------------------------------------------------------------------------------
+<font color=red face="Times new Roman" size=+3>Welcome to website</font>
+---------------------------------------------------------------
+<p>-----paragraph tag.
+---------------------------------------------------------------------------------------
+<marquee>-------------This is to scroll the text,image.
+It will work in all direction left to right,right to left ,up to down
+----------------------------------------------------------------------------------------
+<body background="abc.jpg">---------------here we are giving the image on the back ground.
+-------------------------------------------------------------------------------
+
+
