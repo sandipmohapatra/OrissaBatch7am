@@ -204,6 +204,38 @@ By hyperlink we don't have to open each pages separately.
 It will work in all direction left to right,right to left ,up to down
 ----------------------------------------------------------------------------------------
 <body background="abc.jpg">---------------here we are giving the image on the back ground.
--------------------------------------------------------------------------------
+-----------------------------------------Google Map--------------------------------------
+Google map:-https://www.google.com/maps/
+search the location
+step 1:share
+step 2:embed Map
+step 3:copy HTML
+step 4:paste the link on your html page.
+
+------------------------------------anchor tag------
+login.html
+
+<a href="Registration.html">New User Please Sign in</a>
+
+When we click on the text it will redirect to the registration page.
+-----------------------------------------------------
+Registration.html
+
+<a href="login.html">Sign up</a>
+-------------------------------Google Form---------------------------------------
+step 1:https://google.com/forms
+step 2:Blank
+step 3:create form
+step 4:email
+step 5:<>
+copy the link
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdMcEHHGm0NWDikfJN6P92Wh3Sxbfz5w8DQlPAt3xZ2RSAz3A/viewform?embedded=true" width="640" height="915" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+step 6:Responses
+step 7: create spreadsheet
+
+https://docs.google.com/spreadsheets/d/1KRCjXpgUqAhy_XDkFM-hpuDkyNmF7L-ZAcExZNXR7cA/edit?resourcekey#gid=1235004700
+
+--------------------------------------------------------------------------------------------
+
 
 
