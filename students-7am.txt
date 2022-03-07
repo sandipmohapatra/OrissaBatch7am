@@ -236,6 +236,11 @@ step 7: create spreadsheet
 https://docs.google.com/spreadsheets/d/1KRCjXpgUqAhy_XDkFM-hpuDkyNmF7L-ZAcExZNXR7cA/edit?resourcekey#gid=1235004700
 
 --------------------------------------------------------------------------------------------
-
+<b>-----Bold
+<strong>---Bold
+<strike>-----It will strike off your word.
+<i>-----Italics
+<img src="123.jpeg" alt="sorry no image" height="120" width="200" align="right"/>
+------------------------------------------------------------
 
 
