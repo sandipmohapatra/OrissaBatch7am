@@ -1,0 +1,21 @@
+CSS is use to design the webpage.
+We use <style> tag for CSS.
+syntax:-
+h1
+{
+background-color:red;
+}
+
+-------------------------------------------------------------
+h1 is the selector
+background-color:red is the declaration.
+background-color--- is the property;
+red-----------is the value.
+------------------------------------------------------
+There are 3 types of CSS
+1)Internal CSS ----It is used to define the style inside a page.It is applicable to a single page only.
+2)External CSS -----It is written outside the html page.It is saved by the extention <.css>.We can apply it through out the application.
+3)Inline CSS-----It is used for a single line.It is applicable for a single line.
+-------------------------------------------------------------------------------------------
+
+ 
