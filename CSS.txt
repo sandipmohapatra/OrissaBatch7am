@@ -36,4 +36,6 @@ margin:100px;<----------------------------------top,bottom,left,right(100px)
 ------------------
 The css margin properties are used to generate space around elements.
 The margin properties set the size of the white space outside the border. 
------------------------------------
+--------------------------------------------------------------------
+input:focus :- It is an event .when we click on the text field the background color is changed to yellow.
+------------------------------------------------------------------
