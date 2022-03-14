@@ -39,3 +39,7 @@ The margin properties set the size of the white space outside the border.
 --------------------------------------------------------------------
 input:focus :- It is an event .when we click on the text field the background color is changed to yellow.
 ------------------------------------------------------------------
+cellspacing :- it the space between two cells.
+--------------------------------------------------------------------------
+cellpadding:- It is the white space border around the cell.
+------------------------------------------------------------------------------- 
