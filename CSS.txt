@@ -18,4 +18,22 @@ There are 3 types of CSS
 3)Inline CSS-----It is used for a single line.It is applicable for a single line.
 -------------------------------------------------------------------------------------------
 
- 
+ css margins
+--------------------------------------
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+applicable for a <div> tag.
+
+margin:100px 400px 150px 80px;<------------top(100px),right(4000px),bottom(150px),left(80px).
+margin:100px 400px 150px;<-----------------top(100px),left and right(400px),bottom (150px)
+margin:100px 400px ; <------------------------top and bottom(100px), right and left(400px)
+margin:100px;<----------------------------------top,bottom,left,right(100px)
+--------------------------------------------------------------------------------------------------------------------------
+* css margins
+------------------
+The css margin properties are used to generate space around elements.
+The margin properties set the size of the white space outside the border. 
+-----------------------------------
