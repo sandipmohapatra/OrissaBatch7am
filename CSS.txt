@@ -11,35 +11,71 @@ h1 is the selector
 background-color:red is the declaration.
 background-color--- is the property;
 red-----------is the value.
-------------------------------------------------------
+--------------------------------------------
 There are 3 types of CSS
+-------------------------------------------
 1)Internal CSS ----It is used to define the style inside a page.It is applicable to a single page only.
 2)External CSS -----It is written outside the html page.It is saved by the extention <.css>.We can apply it through out the application.
 3)Inline CSS-----It is used for a single line.It is applicable for a single line.
 -------------------------------------------------------------------------------------------
-
- css margins
---------------------------------------
-margin-top
-margin-right
-margin-bottom
-margin-left
-
-applicable for a <div> tag.
-
-margin:100px 400px 150px 80px;<------------top(100px),right(4000px),bottom(150px),left(80px).
-margin:100px 400px 150px;<-----------------top(100px),left and right(400px),bottom (150px)
-margin:100px 400px ; <------------------------top and bottom(100px), right and left(400px)
-margin:100px;<----------------------------------top,bottom,left,right(100px)
---------------------------------------------------------------------------------------------------------------------------
-* css margins
-------------------
-The css margin properties are used to generate space around elements.
-The margin properties set the size of the white space outside the border. 
---------------------------------------------------------------------
-input:focus :- It is an event .when we click on the text field the background color is changed to yellow.
-------------------------------------------------------------------
-cellspacing :- it the space between two cells.
+Example 1:Inline CSS.The scope is within a line
 --------------------------------------------------------------------------
-cellpadding:- It is the white space border around the cell.
-------------------------------------------------------------------------------- 
+<!-- Inline CSS:- It is applicable within a line.-->
+<html>
+<body>
+<h1 style="color:blue;text-align:center;">This is an example of Inline CSS.It is applicable only for the single line.</h1><hr>
+<p style="color:blue;text-align:center;">This is an example of Inline CSS</p>
+<p style="background-color:yellow;color:blue;text-align:center;">This is an example of Inline CSS</p>
+<p style="font-size:25px;color:green;text-align:center;">This is an example of Inline CSS</p>
+</body>
+</html>
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Example 2:External css
+----------------------------------------------------
+The css is defined outside the html page.We have to access the page inside our html page.In the real time we use maximum external css.The scope is through out the application.
+------------------------------------------------------
+abcd.css
+-----------------------
+p{color:blue;}
+h1{ color:red;}
+h2{ color:green;}
+h3{ background-color:red;}
+body {background-color:yellow;}
+---------------------------------------------------------------------------------------
+cssexample7.html
+----------------------------------------------
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="abcd.css"/> <!-- It is used to access the external stylesheet-->
+</head>
+<body>
+<h1><center>We have to practice CSS daily</center></h1>
+<h2><center>We have to practice CSS daily</center></h1>
+<h3><center>We have to practice CSS daily</center></h1>
+ <p>Practice make you perfect<p>
+ <p>Practice make you perfect<p>
+ <p>Practice make you perfect<p>
+ <p>Practice make you perfect<p>
+ <p>Practice make you perfect<p>
+</body>
+</html>
+----------------------------------------------------------------------------------
+cssexample8.html
+----------------------------------------------
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="abcd.css"/>
+</head>
+<body>
+<h1><center>Binay and Swarna  practice CSS daily</center></h1>
+<h2><center>Binay and Swarna  practice CSS daily</center></h1>
+<h3><center>Binay and Swarna  practice CSS daily</center></h1>
+ <p>Practice make you perfect<p>
+ <p>Practice make you perfect<p>
+ <p>Practice make you perfect<p>
+ <p>Practice make you perfect<p>
+ <p>Practice make you perfect<p>
+</body>
+</html>
+----------------------------------------------------------------------------------
+ 
