@@ -78,4 +78,144 @@ cssexample8.html
 </body>
 </html>
 ----------------------------------------------------------------------------------
- 
+ margin:-
+----------------------
+It is used to leave space on all sides of the element.
+margin-top
+margin-right
+margin-bottom
+margin-left
+------------------------------------------------------------
+<style>
+div{
+margin-top:100px;
+margin-right:150px;
+margin-bottom:200px;
+margin-left:120px;
+border:1px solid black;
+background-color:cyan;
+}
+</style>
+---------------------------------------------------------------------------------------------
+<style>
+div{
+margin:100px 150px 200px 120px;
+border:1px solid black;
+background-color:cyan;
+}
+</style>
+----------------------------------------------------------------------------------------------
+<style>
+div{
+margin:100px 200px 120px;
+border:1px solid black;
+background-color:cyan;
+}
+</style>
+*top margin is 100px.
+right and left is 200px.
+bottom is 120px.
+-------------------------------------------------------------------
+<style>
+div{
+margin:100px 200px;
+border:1px solid black;
+background-color:cyan;
+}
+</style>
+*top and buttom margin is 100px.
+right and left is 200px.
+---------------------------------------------------------------------------------
+<style>
+div{
+margin:100px;
+border:1px solid black;
+background-color:cyan;
+}
+</style>
+*all four margin is 100px.
+---------------------------------------------------------------------------
+*margin is outside the element.padding is inside the element.
+----------------------------------------------------------------------------
+CSS padding:-
+---------------------------
+The CSS padding properties are used to genrate space around the content.
+
+padding-top
+padding-right
+padding-bottom
+padding-left
+--------------------------------------------------------------------
+example:-
+--------------------
+<html>
+<style>
+div
+{
+margin:100px;
+padding-top:50px;
+padding-right:30px;
+padding-bottom:50px;
+padding-left:80px;
+border: 1px solid red;
+background-color:yellow;
+}
+</style>
+<body>
+<div>
+<p>This is an example of CSS Margin</p>
+<p>This is an example of CSS Margin</p>
+<p>This is an example of CSS Margin</p>
+</div>
+</body>
+</html>
+-------------------------------------------------------
+padding-top:50px;
+padding-right:30px;
+padding-bottom:50px;
+padding-left:80px;
+---------------------------------------------------
+div
+{
+margin:100px;
+padding:50px;
+border: 1px solid red;
+background-color:yellow;
+}
+*all four side 50px
+----------------------------------------------------------------
+div
+{
+margin:100px;
+padding:50px 120px;
+border: 1px solid red;
+background-color:yellow;
+}
+
+top and buttom padding is 50px.
+right and left padding is 120px.
+-----------------------------------------------------------------------------
+div
+{
+margin:100px;
+padding:50px 20px 30px 60px;
+border: 1px solid red;
+background-color:yellow;
+}
+
+top padding is 50px;
+right padding is 20px;
+bottom padding is 30px;
+left padding is 60px;
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
