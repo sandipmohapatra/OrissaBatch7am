@@ -1,0 +1,39 @@
+HTML5 :- html+css+javascript(geo-location,session storage,svg,canvas)
+-------------------------------------------------------
+<html>
+<style>
+</style>
+
+<script>
+</script>
+
+<body>
+</body>
+
+</html>
+------------------------------------------------------------------------------
+javascript
+------------------------
+1)we have to save the file with .html extention.
+2)java script is case sensitive.
+3)It is supported by advance browser.
+4)javascript support Object Oriented programming.
+5)we have a datatype called var.
+6) we have lot of pre-defined function and we can also create user-defined functions.
+7)we can create class,object and constructor in javascript.
+8)javascript will make the html page dynamic.(calculator :- add,sub,mul,div)
+9)javascript is mostly used to validate the html page.
+example:- phoneno should be 10digits,password must be 8 characters long.
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
