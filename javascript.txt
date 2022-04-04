@@ -1,4 +1,4 @@
-HTML5 :- html+css+javascript(geo-location,session storage,svg,canvas)
+HTML5 :- html+css+javascript(geo-location,session storage,svg,canvas,api)
 -------------------------------------------------------
 <html>
 <style>
@@ -25,9 +25,16 @@ javascript
 9)javascript is mostly used to validate the html page.
 example:- phoneno should be 10digits,password must be 8 characters long.
 -------------------------------------------------------------------------------------------------------------------------
+we can create class,object and constructor in javascript.
+---------------------------------------------------------------------------
+class :- class name is student .it has data member like rollno,name,address,marks.
+class student {rollno,name,address,marks,email,phoneno}
+In a class there can be 40 students. so we have to create 40 objects.
+class is structure which contain varites of data variable.
+we can access it using object.we have to create object to access the data variables.
+------------------------------------------------------------------------------------
 
-
-
+create a cons
 
 
 
