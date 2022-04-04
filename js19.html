@@ -1,0 +1,14 @@
+<html>
+<script>
+function emp(id,name,address) <!-- These are the parameters -->
+{
+this.id=id; <!-- this is a ref pointer which is used to assign the value to itself -->
+this.name=name;
+this.address=address;
+}
+
+x=new emp(101,"sandip","Bangalore");
+
+document.write(x.id+"  "+x.name+" "+x.address);
+</script>
+</html>
