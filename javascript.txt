@@ -34,7 +34,38 @@ class is structure which contain varites of data variable.
 we can access it using object.we have to create object to access the data variables.
 ------------------------------------------------------------------------------------
 
-create a cons
+create a constructor student
+pass rollno,name,address,phoneno as parameter and display the data.
+--------------------------------------------------------------------
+javascript :-
+1)Math function
+2)date function
+3)string function
+4)events
+5)getElementById
+6)innerHTML
+7)validation.
+------------------------------------------------
+css :-
+1)margin
+2)padding
+3)id
+4)class
+5)float
+6)external css
+7)internal css
+8)inline css
+---------------------------------------------------
+html:-
+1)table,td,th,cell spacing,cell padding,border
+2)form action
+3)iframe :- google map,google form
+4)div,p,span
+5)<h1>
+6)fieldset
+7)image,adio,video
+------------------------------------------------------------
+
 
 
 
