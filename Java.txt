@@ -243,6 +243,9 @@ else
 }
 }
 -----------------------------------------------------------
+1)next():- It is a pre-defined function to take string as input.
+2)nextInt():- It is a pre-defined function to take integer as input.
+3)nextFloat():- It is a pre-defined function to take float as input.
 
 
 
