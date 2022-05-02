@@ -634,7 +634,38 @@ public static void main(String[] args) {
 	}
 }
 ---------------------------------------------------------------------------------------------------
+wap to enter 2 int,2 float and find the greatest among the 2.
+---------------------------------------------------------------------------------------
+example-3
+-------------------
+package org.sandip;
 
+public class MethodDemo2 
+{
+int greater(int a,int b)
+{
+	if(a>b)
+	return a;
+	else
+		return b;
+}
+float greater(float a,float b)
+{
+	if(a>b)
+		return a;
+		else
+			return b;
+}
+
+public static void main(String[] args) {
+	MethodDemo2 ob=new MethodDemo2();
+	System.out.println("The greater is "+ob.greater(4,5));  
+	System.out.println("The greater is "+ob.greater(14,15));
+	System.out.println("The greater is "+ob.greater(14.3f,15.3f));
+	
+	}
+}
+------------------------------------------------------------------------------------------------------
 
 
 
