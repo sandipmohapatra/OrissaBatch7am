@@ -573,7 +573,7 @@ class :- variable and methods.methods has return type
 int sum(int a,int b);  :- int is a return type.
 float sum(float a,float b); :-float is a return type.
 ----------------------------------------------------------------------------
-when you have same function name with different parameter and return type it is known as function overloading.
+when you have same function name with different datatype the parameter and return type it is known as function overloading.
 ----------------------------------------------------------------------------------
 example-11
 --------------------
@@ -581,7 +581,7 @@ package org.sandip;
 
 public class MethodDemo 
 {
-int sum(int a,int b)
+int sum(int a,int b)   <-----function has parameter,return type.
 {
 	return a+b;
 }
