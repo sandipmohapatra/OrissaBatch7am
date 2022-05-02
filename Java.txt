@@ -602,6 +602,38 @@ public static void main(String[] args) {
 	}
 }
 ----------------------------------------------------------------------------
+example-12
+--------------------------
+package org.sandip;
+
+public class MethodDemo 
+{
+int sum(int a,int b)
+{
+	return a+b;
+}
+float sum(float a,float b)
+{
+	return a+b;
+}
+double sum(double a,double b)
+{
+	return a+b;
+}
+void sum1(long a,long b)
+{
+	System.out.println("The sum is "+(a+b));
+}
+public static void main(String[] args) {
+	MethodDemo ob=new MethodDemo();
+	System.out.println("The sum is "+ob.sum(4,5));  
+	System.out.println("The sum is "+ob.sum(14,15));
+	System.out.println("The sum is "+ob.sum(14.3f,15.3f));
+	System.out.println("The sum is "+ob.sum(44.22,54.33));
+	ob.sum1(78,76);
+	}
+}
+---------------------------------------------------------------------------------------------------
 
 
 
