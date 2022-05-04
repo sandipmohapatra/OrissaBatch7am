@@ -696,6 +696,39 @@ public static void main(String[] args)
 }
 }
 ---------------------------------------------------------------------------------------
+example-5
+----------------
+package org.sandip;
+import java.util.*;
+public class Revision1 
+{
+	int x=11;  //<--intance variable you can access throught out the class -- >
+int sqr(int a) //local variable you can access it within the method .
+{
+	return a*a;
+}
+float sqr(float a)
+{
+	return a*a;
+}
+double sqr(double a)
+{
+	return a*a;
+}
+public static void main(String[] args)
+{
+	Revision1 ob=new Revision1();
+	Scanner obj=new Scanner(System.in);
+	System.out.println("Enter a integer");
+	int s1=obj.nextInt();
+	System.out.println("the value of x is "+ob.x);
+	System.out.println("the value of a is "+ob.sqr(s1));
+	System.out.println("the value of a is "+ob.sqr(60.0f));
+	System.out.println("the value of a is "+ob.sqr(70.0));
+	
+}
+}
+-----------------------------------------------------------------------------------------------
 
 
 
