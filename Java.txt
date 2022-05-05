@@ -790,7 +790,41 @@ public static void main(String[] args) {
 }
 }
 -----------------------------------------------------------------------------
-
+Inserting value at the runtime.
+-------------------------------------------------------------
+example-
+package org.constructor;
+import java.util.*;
+public class ConstructorDemo2 
+{
+int rollno;//instance variable can be accessed through out the class.
+String name,address;
+ ConstructorDemo2(int rollno, String name, String address) //local variable
+{
+	this.rollno = rollno;//assigning to instance variables.
+	this.name = name;
+	this.address = address;
+}
+ void display()
+  {
+	 System.out.println("The rollno is "+rollno);
+	 System.out.println("The name is "+name);
+	 System.out.println("The address is "+address);
+  }
+ 
+public static void main(String[] args) 
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter rollno,name,address");
+	int r=ob.nextInt();
+	String n=ob.next();
+	String add=ob.next();
+	ConstructorDemo2 ob1=new ConstructorDemo2(r,n,add);
+			ob1.display();
+		
+}
+}
+--------------------------------------------------------------------------------------------------------------------
 
 
 
