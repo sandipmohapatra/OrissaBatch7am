@@ -758,7 +758,38 @@ public static void main(String[] args) {
 }
 }
 ----------------------------------------------------------------------------------------------------------------------
+wap to enter 3 employee data and display it(empno,name,designation,salary)
+-----------------
+package org.constructor;
 
+public class ConstructorDemo 
+{
+int rollno;//instance variable can be accessed through out the class.
+String name,address;
+ ConstructorDemo(int rollno, String name, String address) //local variable
+{
+	this.rollno = rollno;//assigning to instance variables.
+	this.name = name;
+	this.address = address;
+}
+ void display()
+  {
+	 System.out.println("The rollno is "+rollno);
+	 System.out.println("The name is "+name);
+	 System.out.println("The address is "+address);
+  }
+ 
+public static void main(String[] args) {
+	ConstructorDemo ob1=new ConstructorDemo(101,"Binay","Bangalore");
+	ConstructorDemo ob2=new ConstructorDemo(102,"Totendra","Bangalore");
+	ConstructorDemo ob3=new ConstructorDemo(103,"swarna","Bangalore");
+		ob1.display();
+		ob2.display();
+		ob3.display();
+		
+}
+}
+-----------------------------------------------------------------------------
 
 
 
