@@ -849,7 +849,8 @@ public class Student
 {
 int rollno;
 String name,address;
-public Student(int rollno, String name, String address) {
+public Student(int rollno, String name, String address) 
+{
 	this.rollno = rollno;
 	this.name = name;
 	this.address = address;
@@ -889,7 +890,10 @@ public static void main(String[] args)
 }
 }
 -------------------------------------------------------------------------------------------------------------
-
+wap to create a parent class employee(empno,name,address)
+create a child class empdetails(dept,salary,age)
+enter the data using constructor and display it.
+--------------------------------------------------------------------------------- 
 
 
 
