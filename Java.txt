@@ -825,11 +825,70 @@ public static void main(String[] args)
 }
 }
 --------------------------------------------------------------------------------------------------------------------
+OOPS Concept
+------------------------------
+1)Inheritance
+2)Polymorphysim
+3)Abstraction
+4)Encapsulation.
+--------------------------------------------------------------------------------
+Inheritance :- It one of  the oops concept in which  the child class will inherite the parent class properties.
+we the use the keyword "extends" to inherite the parent class into the child class.
+We use the keyword "super" to access the parent class variables and methods into the child class.
+In the parent class we don't have the main method.we will have it in child class.we will create object of the child class only and access the child class as well as parent class variables and methods.
 
+example:- windows-7,windows-8,windows-10,.....(re-using of existing parent class) 
+---------------------------------------------------------------------------------------------------------------------------------------------
+student class(rollno,name,address)
+acadamic class extends student class.(phy,chem,bio,total)
+-----------------------------------------------------------------------------------------
+example-1
+-------------------
+package org.constructor;
+public class Student 
+{
+int rollno;
+String name,address;
+public Student(int rollno, String name, String address) {
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+void display()
+{
+	System.out.println("The rollno is "+rollno);
+	System.out.println("The name is "+name);
+	System.out.println("The address is "+address);
+	}
+}
+---------------------------------------------------------------------------
+package org.constructor;
 
+public class Academic extends Student
+{
+int phy,chem,bio,total;
 
-
-
+public Academic(int rollno, String name, String address, int phy, int chem, int bio) {
+	super(rollno, name, address);//first the super class constructor will execute then the sub-class constructor .
+	this.phy = phy;
+	this.chem = chem;
+	this.bio = bio;
+	}
+void display()
+{
+	super.display();//parent class display
+	System.out.println("the physics marks is "+phy);
+	System.out.println("the chemistry marks is "+chem);
+	System.out.println("the biology marks is "+bio);
+	System.out.println("the total marks is "+(phy+chem+bio));
+	}
+public static void main(String[] args) 
+{
+	Academic ob=new Academic(101,"sandip","bangalore",66,77,88);
+	ob.display();
+}
+}
+-------------------------------------------------------------------------------------------------------------
 
 
 
