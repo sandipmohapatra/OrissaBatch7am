@@ -894,7 +894,55 @@ wap to create a parent class employee(empno,name,address)
 create a child class empdetails(dept,salary,age)
 enter the data using constructor and display it.
 --------------------------------------------------------------------------------- 
+example-1
+-----------------------------
+package org.constructor;
 
+public class Employee 
+{
+	int empno;
+	String name,address;
+	public Employee(int empno, String name, String address) {
+		super();
+		this.empno = empno;
+		this.name = name;
+		this.address = address;
+	}
+	
+	void display()
+	{
+		System.out.println("The empno is"+empno);
+		System.out.println("The name is"+name);
+		System.out.println("The address is"+address);
+			}
+}
+-----------------------------------------------
+package org.constructor;
+
+public class EmployeeDetails extends Employee
+{
+	String dept;
+	float salary,age;
+	public EmployeeDetails(int empno, String name, String address, String dept, float salary, float age) 
+	{
+		super(empno, name, address);
+		this.dept = dept;
+		this.salary = salary;
+		this.age = age;
+	}
+	void display()
+	{
+		super.display();
+		System.out.println("the dept is "+dept);
+		System.out.println("the salary is "+salary);
+		System.out.println("the age is "+age);
+			}
+	public static void main(String[] args) {
+		EmployeeDetails ob=new EmployeeDetails(101,"sandip","Bangalore","sales",5600.45f,22);
+		ob.display();
+	}
+}
+-----------------------------------------------------------------------------------------------
 
 
 
