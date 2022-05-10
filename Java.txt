@@ -943,7 +943,57 @@ public class EmployeeDetails extends Employee
 	}
 }
 -----------------------------------------------------------------------------------------------
+Inheritance :- parent's properties accessed by child is known as inheritance.
+to perforrm inheritance we have to use extends keyword.
+To access the parent class variable and methods we use super keyword.
+----------------------------------------------------------
+example-
+package org.constructor;
 
+public class Bank 
+{
+int icode;
+String bname,bloc;
+public Bank(int icode, String bname, String bloc)
+{
+	this.icode = icode;
+	this.bname = bname;
+	this.bloc = bloc;
+}
+void display()
+{
+	System.out.println("The IFICI code is :"+icode);
+	System.out.println("The bank name is :"+bname);
+	System.out.println("The bank location is :"+bloc);
+	}
+}
+--------------------------------------------------
+package org.constructor;
+
+public class Customer extends Bank 
+{
+int accno;
+String name,balance;
+public Customer(int icode, String bname, String bloc, int accno, String name, String balance)
+{
+	super(icode, bname, bloc);
+	this.accno = accno;
+	this.name = name;
+	this.balance = balance;
+}
+void display()
+{
+	super.display();
+	System.out.println("the accno is "+accno);
+	System.out.println("the name is "+name);
+	System.out.println("the balance is "+balance);
+	}
+public static void main(String[] args) {
+	Customer ob=new Customer(101,"SBI","MG Road",1001,"sandip","5000");
+	ob.display();
+}
+}
+---------------------------------------------------------------------------------------------------------------- 
 
 
 
