@@ -993,7 +993,84 @@ public static void main(String[] args) {
 	ob.display();
 }
 }
----------------------------------------------------------------------------------------------------------------- 
+----------------------------------------------------------------------------------------------------------------
+create a class student(rollno,name,address)
+create a class marks(phy,chem,bio,total)
+create a class fees(month,fees,status)
+display the details of the student.
+------------------------------------------------------------------------------
+Giving input at runtime
+Example-1
+-----------------
+import java.util.*;
+public class InheriteDemo 
+{
+int rollno,phy,chem,maths; //instance variable can be accessed through out the class.
+String name,address;
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter rollno,name,address");
+	rollno=ob.nextInt();
+	name=ob.next();
+	address=ob.next();
+	System.out.println("enter physics,chemistry,maths");
+	phy=ob.nextInt();
+	chem=ob.nextInt();
+	maths=ob.nextInt();
+}
+void display()
+{
+	System.out.println("The rollno is :"+rollno);
+	System.out.println("The name is :"+name);
+	System.out.println("The address is :"+address);
+	System.out.println("Physics : "+phy+"Chemistry :"+chem+" maths :"+maths);
+	}
+}
+-------------------------------------------------------------------------------
+public class InheritanceChild extends InheriteDemo
+{
+int total,avg;
+String grade;
+void input()
+{
+super.input();
+total=phy+chem+maths;
+avg=total/3;
+}
+void display()
+{
+	super.display();
+	System.out.println("The total is :"+total);
+	System.out.println("The average is :"+avg);
+	if(avg>=70)
+			grade="First Division";
+	else if(avg>=60)
+		grade="Second Division";
+	else if(avg>=50)
+		grade="Third Division";
+	else
+		grade="Fail";
+	System.out.println("The grade ="+grade);
+}
+public static void main(String[] args) 
+{
+	InheritanceChild ob=new InheritanceChild();
+	ob.input();
+	ob.display();
+}
+}
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+ 
 
 
 
