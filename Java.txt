@@ -1061,11 +1061,50 @@ public static void main(String[] args)
 }
 }
 ------------------------------------------------------------------------------------------------
+Abstract :- we can declare a class as abstract.method as abstract means methods without body.
+The abstract means incomplete class and method.
+we cannot create object of an abstract class.
+we have to inherite the abstract class into a child class and override the abstract method.
 
+An abstract class can contain abstract methods as well as concrete methods means method with body.
+we can create object of the child class which extends the abstract class.
+-------------------------------------------------------------------------------------------------------------
+example-1
+-------------------
+package org.abstractDemo;
+abstract class AbstractDemo1 
+{
+abstract void display();  //method without body
+abstract void display1(); //method without body
+void display2() 
+{
+	System.out.println("The method with body");
+}
+}
+public class AbstractDemo extends AbstractDemo1
+{
 
+	@Override
+	void display() 
+	{
+	System.out.println("this is display");
+	}
 
-
-
+	@Override
+	void display1() 
+	{
+		System.out.println("this is display1");
+	}
+	public static void main(String[] args) {
+		AbstractDemo ob=new AbstractDemo();
+		ob.display();
+		ob.display1();
+		ob.display2();
+	}
+}
+-----------------------------------------------------------------------------
+override :- what ever method we have in the parent class without body will be overriden in the child class and will have body is known as method override.
+----------------------------------------------------------------------------------
 
 
 
