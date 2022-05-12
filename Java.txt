@@ -1076,7 +1076,7 @@ abstract class AbstractDemo1
 {
 abstract void display();  //method without body
 abstract void display1(); //method without body
-void display2() 
+void display2() //concrete method with body
 {
 	System.out.println("The method with body");
 }
@@ -1105,7 +1105,39 @@ public class AbstractDemo extends AbstractDemo1
 -----------------------------------------------------------------------------
 override :- what ever method we have in the parent class without body will be overriden in the child class and will have body is known as method override.
 ----------------------------------------------------------------------------------
+example-2
+-------------------
+package org.abstractDemo;
 
+abstract class Abstractdemo3
+{
+	abstract int sum(int a,int b);
+	abstract float sum(float a,float b);
+}
+
+public class Abstractdemo4 extends Abstractdemo3 
+{
+
+	@Override
+	int sum(int a, int b) 
+	{
+			return a+b;
+	}
+
+	@Override
+	float sum(float a, float b) {
+			return a+b;
+	}
+	public static void main(String[] args) {
+		Abstractdemo4 ob=new Abstractdemo4();
+		System.out.println("The sum is "+ob.sum(5,6));
+		System.out.println("The sum is "+ob.sum(15.0f,6.0f));
+		System.out.println("The sum is "+ob.sum(51,61));
+		
+	}
+
+}
+---------------------------------------------------------------------------------------------------
 
 
 
