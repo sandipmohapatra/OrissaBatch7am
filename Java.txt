@@ -1138,8 +1138,68 @@ public class Abstractdemo4 extends Abstractdemo3
 
 }
 ---------------------------------------------------------------------------------------------------
+Interface :- it is similar to abstract class.In interface it only contains abstract methods.
+we cannot create object of the interface.we have to inherite the interface into a child class and create object of the child class.
+By interface we can perform multiple inheritance.
+An interface can inherite another interface.
+In interface the variables are final and has to be declared.
+--------------------------------------------------------------------------------------
+example:-
+package org.abstractDemo;
+interface student
+{
+	void student(int rollno,String name,String address);
+}
+
+interface marks
+{
+	int phy=56, chem=76, bio=64;  //interface the values are final and has to be assigned.
+	void marks();
+	}
+
+interface result extends marks //inheriting
+{
+	void result();
+	}
 
 
+public class InterfaceDemo implements student,result  //multiple inheritance
+{
+
+	@Override
+	public void marks() 
+	{
+	System.out.println("the physics marks is "+phy);
+	System.out.println("the chemistry marks is "+chem);
+	System.out.println("the Biology marks is "+bio);
+		}
+
+	@Override
+	public void result() 
+	{
+	int total=phy+chem+bio;
+		int avg=total/3;
+		System.out.println("The total is "+total);
+		System.out.println("The average is "+avg);
+	}
+
+	@Override
+	public void student(int rollno, String name, String address) 
+		{
+		System.out.println("the rollno is "+rollno);
+		System.out.println("The name is "+name);
+		System.out.println("The address is "+address);
+			}
+
+	public static void main(String[] args) 
+	{
+		InterfaceDemo ob=new InterfaceDemo();
+		ob.student(101, "sandip", "Bangalore");
+		ob.marks();
+		ob.result();
+	}
+}
+---------------------------------------------------------------------------------
 
  
 
