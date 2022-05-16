@@ -1200,8 +1200,29 @@ public class InterfaceDemo implements student,result  //multiple inheritance
 	}
 }
 ---------------------------------------------------------------------------------
-
- 
+Final and static --monday
+--------------------------------
+ Final keyword:- we can declare the class as final,variable as final and we can have final method.
+If we declare the class as final we cannot inherite it.
+If we declare the variable as final we have to assign it and it cannot be changed.
+If we declare the method as final we cannot override it.
+---------------------------------------------------------------------------------------------------
+example-1
+------------------
+public final class FinalDemo 
+{
+final int x = 10;
+final void display()
+{
+	System.out.println("This is a final method");
+	System.out.println(x);
+}
+public static void main(String[] args) {
+	FinalDemo fd=new FinalDemo();
+	fd.display();
+}
+}
+----------------------------------------------------------------------------------------------
 
 
 
