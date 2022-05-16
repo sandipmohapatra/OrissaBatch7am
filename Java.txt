@@ -1223,6 +1223,45 @@ public static void main(String[] args) {
 }
 }
 ----------------------------------------------------------------------------------------------
+static:- we can declare a variable as static .Method as static and we can have static block.
+we can access the variable,method and block without creating an object. 
+The static block execute before the main method.
+
+example-1
+-----------------
+
+public class StaticDemo 
+{
+static int a=10;
+static int b=20;
+static void display()
+{
+	System.out.println("This is a static method");
+}
+static
+{
+	System.out.println("This is a static block");
+}
+public static void main(String[] args) {
+	System.out.println("The sum of a and b is "+(a+b));
+	display();
+	}
+}
+-------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
