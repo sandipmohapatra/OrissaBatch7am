@@ -1226,6 +1226,9 @@ public static void main(String[] args) {
 static:- we can declare a variable as static .Method as static and we can have static block.
 we can access the variable,method and block without creating an object. 
 The static block execute before the main method.
+We can not access notstatic variables inside a static block.
+static variables once incremented remains incremented. 
+---------------------------------------------------------------------------------------------------------
 
 example-1
 -----------------
@@ -1248,7 +1251,25 @@ public static void main(String[] args) {
 	}
 }
 -------------------------------------------------------------------------------------------
+example-2
+-------------------
 
+public class StaticDemo2 
+{
+ static int a=10;
+ static void display()
+{
+	System.out.println("This value of a is :"+a);
+	a++;
+}
+public static void main(String[] args) {
+		display();
+		display();
+		display();
+		display();
+	}
+}
+-------------------------------------------------------------------------
 
 
 
