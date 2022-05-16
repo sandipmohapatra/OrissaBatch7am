@@ -1270,7 +1270,16 @@ public static void main(String[] args) {
 	}
 }
 -------------------------------------------------------------------------
-
+Exception Handling
+--------------------------------------
+This is used to handle the error.
+There are 3 types of error 
+1)syntax error
+2)logical error
+3)runtime error
+We are going to handle runtime error.The syntax and logical error has to be handled manually.
+There are 5 keyword :- try,catch,finally,throws,throw.
+--------------------------------------------------------------------------------------------------------
 
 
 
