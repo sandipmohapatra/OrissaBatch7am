@@ -1331,8 +1331,58 @@ System.out.println("End of program");
 --------------------------------------------------------------------------------------------
 * The main purpose is to flow till the end of the program
 --------------------------------------------------------------------------------------------
-
-
+Example-3(try---finally)
+----------------------------------------
+package org.exception;
+import java.util.*;
+public class FirstEx2 
+{
+public static void main(String[] args)
+{
+	try
+	{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter 2 nos");
+int a=ob.nextInt();
+int b=ob.nextInt();
+int c=a/b;
+System.out.println("the Result is :"+c);
+	}
+	finally
+	{
+System.out.println("End of program");
+}
+}
+}
+-------------------------------------------------------------------
+Example-4(try--catch--finally)
+-------------------------------------------------------
+package org.exception;
+import java.util.*;
+public class FirstEx3 
+{
+public static void main(String[] args)
+{
+	try
+	{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter 2 nos");
+int a=ob.nextInt();
+int b=ob.nextInt();
+int c=a/b;
+System.out.println("the Result is :"+c);
+	}
+	catch(Exception ae)
+	{
+		System.out.println("The error is "+ae);
+	}
+	finally
+	{
+System.out.println("End of program");
+}
+}
+}
+------------------------------------------------------------------------------------------------------------
 
 
 
