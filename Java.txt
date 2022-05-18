@@ -1280,11 +1280,57 @@ There are 3 types of error
 We are going to handle runtime error.The syntax and logical error has to be handled manually.
 There are 5 keyword :- try,catch,finally,throws,throw.
 --------------------------------------------------------------------------------------------------------
+The main purpose of exception handling is to handle the error and allow the program to excecute till the end .
+They are divided into 2 groups
+1)checked Exception:- SQLException,InterruptedException,IOException....
+2)unchecked Exception:-ArithmeticException,ArrayIndexOutOfBoundException,NumberFormatException....
 
-
-
-
-
+----------------------------------------------------------------------------------------------------------
+example-1(with handling the error)
+----------------------
+package org.exception;
+import java.util.*;
+public class FirstEx 
+{
+public static void main(String[] args)
+{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter 2 nos");
+int a=ob.nextInt();
+int b=ob.nextInt();
+int c=a/b;
+System.out.println("the Result is :"+c);
+System.out.println("End of program");
+}
+}
+--------------------------------------------------------------------------------------
+example-2(handle the error so that it will execute till the end)
+-------------------------------------------------------------------------------------
+package org.exception;
+import java.util.*;
+public class FirstEx 
+{
+public static void main(String[] args)
+{
+	try
+	{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter 2 nos");
+int a=ob.nextInt();
+int b=ob.nextInt();
+int c=a/b;
+System.out.println("the Result is :"+c);
+	}
+	catch(Exception ae)
+	{
+		System.out.println("The error is :"+ae);
+	}
+System.out.println("End of program");
+}
+}
+--------------------------------------------------------------------------------------------
+* The main purpose is to flow till the end of the program
+--------------------------------------------------------------------------------------------
 
 
 
