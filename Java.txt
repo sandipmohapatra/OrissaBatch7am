@@ -1413,7 +1413,42 @@ System.out.println("the Result is :"+c);
 System.out.println("End of program");
 }}}
 ------------------------------------------------------------------------------------
-
+Example-6(ArrayIndexOutOfBound Exception)
+------------------------------------------------------------------------------------------
+package org.exception;
+import java.util.*;
+public class FirstEx5 
+{
+public static void main(String[] args)
+{
+	try
+	{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter 5 nos");
+int a[]=new int[5];
+for(int i=0;i<5;i++)
+{
+	a[i]=ob.nextInt();
+}
+System.out.println("5 nos are");
+for(int i=0;i<=5;i++)
+{
+System.out.println(a[i]);
+}
+	}
+	catch(ArithmeticException ae)
+	{
+		System.out.println("The error is "+ae);
+	}
+	catch(Exception ae)
+	{
+		System.out.println("The errorr is "+ae);
+	}
+	finally
+	{
+System.out.println("End of program");
+}}}
+-------------------------------------------------------------------------------
 
 
 
