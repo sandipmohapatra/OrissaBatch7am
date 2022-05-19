@@ -1464,6 +1464,36 @@ i++ (i+1) <-------------increment
 *suppose you have entered 5 nos and trying to display 6 nos.
 Then the arrayIndexOutOfBound Exception will occur.
 -----------------------------------------------------------------------------------
+Throws Exception
+----------------------------------------
+This is mainly used to handle checked Exception.It is used with method.it doesnot have body.
+Example-7
+-------------------------
+package org.exception;
+public class FirstEx6 
+{
+public static void main(String[] args) throws Exception
+{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println(i);
+		Thread.sleep(1000);
+	}
+}
+}
+----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
