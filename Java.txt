@@ -1482,9 +1482,29 @@ public static void main(String[] args) throws Exception
 }
 }
 ----------------------------------------------------------------------
-
-
-
+throw Exception:-This is used for user defined exception.
+example:- marks should be greater than zero.
+salary should be greater than 20k.
+age to vote should be greater than or equal to 18 years.
+------------------------------------------------------------------------------------------
+Example-8
+---------------------
+package org.exception;
+import java.util.*;
+public class FirstEx6 
+{
+public static void main(String[] args) throws Exception
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter your age");
+	int age=ob.nextInt();
+	if(age>=18)
+		System.out.println("eligible to vote");
+	else
+		throw new Exception("The age should be greater than or equal to 18 to vote ");
+}
+}
+----------------------------------------------------------------------------
 
 
 
