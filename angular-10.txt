@@ -36,6 +36,11 @@ When you create a project we have make changes in these files
 ------------------------------------------------------------------------------------------------------------
 step-1:-how to create project
 src/app>ng g c login --skipTests
+
+step-2 :- change the selector in index.html
+
+step-3 :- [bootstrap] :- make the change 
+step-4:- ng serve
 -------------------------------------------
 example-1
 -------------------
@@ -53,3 +58,20 @@ app.component.html
 </table>
 </form>
 -------------------------------------------------------------
+ng g c register --skipTests
+ng g c login --skipTests
+ng g c contact --skipTests
+ng g c feedback --skipTests
+
+-------------------------------------------------------------------------
+<h1>Employee Login Page</h1><hr>
+<form>
+<table>
+<tr><td>Enter your name</td><td><input type=text name=t1 size=20></td></tr>
+<tr><td>Enter your password</td><td><input type=password name=t2 size=20></td></tr>
+<tr><td></td><td><input type=submit value="submit"></td></tr>
+</table>
+</form>
+---------------------------------------------------------------------------------------
+
+
