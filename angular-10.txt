@@ -73,5 +73,35 @@ ng g c feedback --skipTests
 </table>
 </form>
 ---------------------------------------------------------------------------------------
+Example-1
+--------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-example3',
+  templateUrl: './example3.component.html',
+  styleUrls: ['./example3.component.css']
+})
+export class Example3Component  {
+public product=
+{
+  Name:'Samsung TV',
+  Price:45000.00,
+  MFD:2021
+}}
+---------------------------------------------------------------------------------------
+<dl>
+    <dt>Name</dt>
+    <dd>{{product.Name}}</dd>
+    <dt>Price</dt>
+    <dd>{{product.Price}}</dd>
+    <dt>Name</dt>
+    <dd>{{product.MFD}}</dd>
+</dl>
+------------------------------------------------------------
+create application
+to display your deatils
+name,address,phoneno,email etc
+--------------------------------------------------------------------
 
 
