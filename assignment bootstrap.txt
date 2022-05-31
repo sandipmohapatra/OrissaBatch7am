@@ -1,0 +1,7 @@
+Create a covid-19 hospital
+1)create a registration page
+2)Display doctor's timetable
+3)create a Book a doctor page
+4)Create a Book an ambulance page
+5)create a Book a bed page
+6)create a Feedback page
