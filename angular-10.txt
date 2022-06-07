@@ -34,6 +34,8 @@ When you create a project we have make changes in these files
 4)app.module.ts----all the files details used in the project.
 5)index.html---change the selector name
 ------------------------------------------------------------------------------------------------------------
+index.html----module.ts--------component.ts
+------------------------------------------------------------------------------------------------------------
 step-1:-how to create project
 src/app>ng g c login --skipTests
 
@@ -104,4 +106,58 @@ to display your deatils
 name,address,phoneno,email etc
 --------------------------------------------------------------------
 
-
+example-1
+--------------------
+step 1:ng g c totendra --skipTests
+---------------------------------
+step 2:index.html
+-------------------------
+step 3:module.ts
+----------------------
+step 4:totendra.html 
+-------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h2>Student Registration Page</h2>
+  <form role="form" action=second>
+    <div class="form-group">
+        <label for="name">Name:</label>
+  <input type="text" class="form-control" id="name" placeholder="Enter name" name=t1 required>
+      </div>
+      <div class="form-group">
+        <label for="number">Phone no:</label>
+  <input type="Number" class="form-control" id="Phone" placeholder="Enter phone no" name=t2 required>
+      </div>
+   
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+<input type="email" class="form-control" id="email" placeholder="Enter email" name=t3 required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name=t4 required>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+<button type="submit" class="btn btn-default">Submit</button> 
+  </form>
+</div>
+</body>
+</html>
+----------------------------------------------------------------
+step 5:ng server
+------------------------------------
+step 6:on browser :-localhost:4200
+------------------------------------------------------------
