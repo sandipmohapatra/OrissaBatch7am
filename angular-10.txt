@@ -33,7 +33,7 @@ When you create a project we have make changes in these files
 3)app.component.css
 4)app.module.ts----all the files details used in the project.
 5)index.html---change the selector name
-------------------------------------------------------------------------------------------------------------
+-------------------------------Flow-----------------------------------------------------------------------------
 index.html----module.ts--------component.ts
 ------------------------------------------------------------------------------------------------------------
 step-1:-how to create project
@@ -161,3 +161,14 @@ step 5:ng server
 ------------------------------------
 step 6:on browser :-localhost:4200
 ------------------------------------------------------------
+Student Registration Page
+Student Timetable Page
+Student Login Page
+Student Enquiry Page
+Student FeedBack Page
+--------------------------------------------------------------------------------
+ng serve :- complile
+---------------------
+flow:-index.html(selector) ---------------->module.ts(bootstrap)------------->component.ts------------->component.html
+---------------------------------------------------------
+
