@@ -172,3 +172,47 @@ ng serve :- complile
 flow:-index.html(selector) ---------------->module.ts(bootstrap)------------->component.ts------------->component.html
 ---------------------------------------------------------
 
+Routing :- Navigating
+On click it will open the particular page.We need for project where we have a menu bar and on clicking on the menu bar we will be navigating to the particular page.
+------------------------------------------------------------
+step 1:- ng g c routerDemo --skipTests
+
+step 2:-import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-routdemo',
+  template: `Be-practical<ul>
+  <li><a [routerLink]="['/Login']">Login</a></li>
+  <li><a [routerLink]="['/Registration']">Regsitration</a></li>
+  <li><a [routerLink]="['/Contact']">Contact</a></li>
+  </ul><hr><hr>
+  <router-outlet></router-outlet>
+    `,
+  
+})
+export class RoutdemoComponent  {}
+--------------------------------------------------------------------------------
+step 3:-
+app.module.ts
+-----------------------------
+import { RouterModule,Routes } from '@angular/router';
+
+import:-
+RouterModule.forRoot(appRoutes),
+--------------------------------------------------------
+step 4:-
+---------------
+const appRoutes: Routes =[ 						
+  { path:'Login',component: LoginComponent },
+  { path:'Registration',component: RegisterComponent },
+  { path:'Contact',component: ContactComponent },
+    ];
+
+
+---------------------------------------------------------------------------------------------
+
+
+
+
+
+
