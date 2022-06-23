@@ -167,7 +167,7 @@ Student Login Page
 Student Enquiry Page
 Student FeedBack Page
 --------------------------------------------------------------------------------
-ng serve :- complile
+ng serve :- compile
 ---------------------
 flow:-index.html(selector) ---------------->module.ts(bootstrap)------------->component.ts------------->component.html
 ---------------------------------------------------------
@@ -233,18 +233,18 @@ Example-2(menubar using Bootstrap)
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a class="w3-bar-item w3-button w3-coral"><i class="fa fa-home w3-margin-right"></i>Be-Practical</a>
+  <a class="w3-bar-item w3-button w3-coral"><i class="fa fa-home w3-margin-right"></i>Wipro Batch-73</a>
   <a routerLink="home" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
   <div class="w3-dropdown-hover w3-hide-small">
     <button class="w3-button" title="Notifications">Registration <i class="fa fa-caret-down"></i></button>     
     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-      <a routerLink="/Registration" class="w3-bar-item w3-button">EmployeeRegistration</a>
-      <a routerLink="/Registration"class="w3-bar-item w3-button">CustomerRegistration</a>
+      <a routerLink="/addemployee" class="w3-bar-item w3-button">EmployeeRegistration</a>
+      <a routerLink="/addemployee"class="w3-bar-item w3-button">CustomerRegistration</a>
     </div>
     </div>
+  
   <a [routerLink]="['/Login']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Login</a>
-  <a [routerLink]="['/Product']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Product</a>
-  <a [routerLink]="['/Inventory']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Inventory</a>  
+   
   
 </div>
 <router-outlet></router-outlet>
