@@ -1585,7 +1585,37 @@ ob3.start();
 }
 }
 --------------------------------------------------------------------------------------------
-
+example-2
+-------------------
+package org.Thread;
+public class Example3 extends Thread
+{
+public void run()
+{
+	try
+	{
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(i+getName());
+			sleep(1000);
+		}
+	}
+	catch(Exception ae)
+	{
+		ae.printStackTrace();
+	}
+}
+public static void main(String[] args) 
+{
+Example3 ob1=new Example3();
+Example3 ob2=new Example3();
+Example3 ob3=new Example3();
+ob1.start();
+ob2.start();
+ob3.start();
+}
+}
+------------------------------------------------------------------------
 
 
 
