@@ -1505,6 +1505,86 @@ public static void main(String[] args) throws Exception
 }
 }
 ----------------------------------------------------------------------------
+MultiThreading
+-----------------------------------
+Thread is a flow of data from the main() till the end .Till now we have done single threaded program.
+The flow start from the main method and ends.
+In multi-Threaded program we will have multiple task running at the same time.
+The threads will run concurrently.
+we have run() which will be called by the start().
+we have to inherite the Thread class or implement runnable interface.
+---------------------------------------------------------------------------------------------------
+example-1
+------------------
+package org.Thread;
+public class Example1 extends Thread
+{
+public void run()
+{
+	try
+	{
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(i);
+			sleep(1000);
+		}
+	}
+	catch(Exception ae)
+	{
+		ae.printStackTrace();
+	}
+}
+}
+---------------------------------------
+package org.Thread;
+public class Example2 extends Thread
+{
+public void run()
+{
+	try
+	{
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(i);
+			sleep(1000);
+		}
+	}
+	catch(Exception ae)
+	{
+		ae.printStackTrace();
+	}
+}
+}
+--------------------------------------------------------
+package org.Thread;
+public class Example3 extends Thread
+{
+public void run()
+{
+	try
+	{
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(i);
+			sleep(1000);
+		}
+	}
+	catch(Exception ae)
+	{
+		ae.printStackTrace();
+	}
+}
+public static void main(String[] args) 
+{
+Example1 ob1=new Example1();
+Example2 ob2=new Example2();
+Example3 ob3=new Example3();
+ob1.start();
+ob2.start();
+ob3.start();
+}
+}
+--------------------------------------------------------------------------------------------
 
 
 
