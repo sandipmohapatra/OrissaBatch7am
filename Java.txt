@@ -1616,6 +1616,367 @@ ob3.start();
 }
 }
 ------------------------------------------------------------------------
+Thread :-
+--------
+The thread is a sort of execution of instruction.
+In a program it start from public static void main(String arg[])
+Statement start executing one after the other.
+
+MultiThread :-
+-------------------
+In an application that is able to manage and coordinate multiple tasks simultaneously is called concurrent, multithread application.
+Multithreaded applications make use of thread switching and scheduling that allow 
+multiple threads to make use of system resources.
+To create a multithread application we have to implement runnable interface or extends Thread class.
+In runnable interface we have one abstract method ->run()
+In Thread class we have different methods.
+
+Life cycle of Thread :-
+-------------------------
+new born thread,
+start,
+runnable(choose of thread),
+running,
+block/wait/sleep,
+dead
+
+methods of Thread:-
+1)getName():-Obtain the thread name.
+
+2)isAlive():- check if a thread is still running.
+
+3)run() :-Entry point for the thread.
+
+4)start():-Start a thread by calling the run method.
+
+5)yield():-this method pauses the currently executing thread temporarily for giving chance to the remaining waiting threads of same priority to execute. if there is no waiting thread or all the waiting thread have a lower
+priority then the same thread will continue its execution.
+
+6)join():-The join() method of thread class waits for a thread to die. It is used when you want one thread to wait for completion of another. This process is like a relay race where the second runner waits until the first runner comes and hand over the flag to him.
+
+7)sleep():-Based on our requirement we can make a thread to be in sleeping state 
+for a specified period of time.
+
+8)setPriority():-To change the priority of the thread.
+
+9)getPriority() :-To get the thread priority.
+MIN_PRIORITY=1 to 4
+NORM_PRIORITY=5
+MAX_PRIORITY=6 to 10
+
+10)Daemon Thread() :-It is a low priority thread which run in the background doing the garbage collection operation .
+
+11)wait() :-Thread will go to wait until some other thread doesnot notify.
+
+12)notify() :- Wakes up a thread that called wait() on some thread. 
+
+13)notifyAll() :-wakes up all the thread that called wait()on some object.
+
+14)The suspend() method of thread class puts the thread from running to waiting state. This method is used if you want to stop the thread execution and start it again when a certain event occurs. This method allows a thread to temporarily cease execution. The suspended thread can be resumed using the resume() method.
+
+15)The holdLock() method of thread class returns true if the current thread holds the monitor lock on the specified object.
+
+16)Java Thread interrupt() method
+The interrupt() method of thread class is used to interrupt the thread. If any thread is in sleeping or waiting state (i.e. sleep() or wait() is invoked) then using the interrupt() method, we can interrupt the thread execution by throwing InterruptedException.
+
+If the thread is not in the sleeping or waiting state then calling the interrupt() method performs a normal behavior and doesn't interrupt the thread but sets the interrupt flag to true.
+
+Synchronization:-
+--------------------
+When two or more threads need access to a shared resource,  need some way to 
+ensure that the resource will be used by only one thread at a time. The process by 
+which it is achieved is called synchronization.
+
+DeadLock:-
+-------------
+When two threads are waiting each other and cannot procced the program is said to 
+be deadlock.
+------------------------------------------------------------------------------------------------------
+Example-1
+-----------------
+Flow of Program :-
+1)we created 3 classes Thread1,Thread2,Thread3 each having run().
+2)start() method will call the run().
+3)we created objects of each class. 
+Thead1 obj=new Thead1();
+Thead2 obj1=new Thead2();
+Thead3 obj2=new Thead3();
+4)we called the run methods of each class by using start method.
+obj.start();
+obj1.start();   
+obj2.start();
+5)all the run methods start exceuting concurrently
+6)to see that which thread is excuting we use a method
+Thread.currentThread().getName() 
+7)JVM will allocate the first thread as Thread-0
+----------------------------------------------------------------------------
+
+package org.iiht.com;
+class Thead1 extends Thread 
+{
+public void run()
+{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println(i);
+		try {
+			sleep(1000);
+		} catch (InterruptedException e) 
+		{
+		e.printStackTrace();
+		}
+	}
+}
+}
+class Thead2 extends Thread 
+{
+public void run()
+{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println(i);
+		try {
+			sleep(1000);
+		} catch (InterruptedException e) {
+		e.printStackTrace();
+		}
+	}
+}}
+class Thead3 extends Thread 
+{
+public void run()
+{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println(i);
+		try {
+			sleep(1000);
+		} catch (InterruptedException e) {
+		e.printStackTrace();
+		}
+	}
+	}}
+public class Theadprg1
+{
+	public static void main(String[] args) 
+	{
+		System.out.println(obj.isAlive());
+		Thead1 obj=new Thead1();
+		Thead2 obj1=new Thead2();
+		Thead3 obj2=new Thead3();
+	obj.start();
+	obj1.start();   //all the run methods start exceuting concurrently
+	obj2.start();
+	System.out.println(obj.isAlive());			}
+}
+
+
+-----------------------------------------------------------
+Example-2
+-------------------
+package org.iiht.com;
+class Theadprg1 extends Thread 
+{
+public void run()
+{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println(i);
+		try {
+			sleep(1000);
+		} catch (InterruptedException e) {
+						e.printStackTrace();
+		}
+	}
+}
+	public static void main(String[] args) 
+	{
+		Theadprg1 obj=new Theadprg1();
+		Theadprg1 obj1=new Theadprg1();
+		Theadprg1 obj2=new Theadprg1();
+		System.out.println(obj.isAlive());
+	obj.start();
+	obj1.start();
+	obj2.start();
+	System.out.println(obj.isAlive());
+			}
+}
+-------------------------------------------------------------------------------------------
+Example-3
+------------------
+package org.iiht.com;
+public class JavaYieldExp extends Thread  
+{  
+    public void run()  
+    {  
+        for (int i=0; i<3 ; i++)  
+            System.out.println(Thread.currentThread().getName() + " in control");  
+    }  
+    public static void main(String[]args)  
+    {  
+        JavaYieldExp t1 = new JavaYieldExp();  
+        JavaYieldExp t2 = new JavaYieldExp();  
+        t1.start();  
+        t2.setPriority(10);
+        t2.start();  
+        System.out.println(t1.getPriority());
+        System.out.println(t2.getPriority());
+             for (int i=0; i<3; i++)  
+        {  
+                        t1.yield();  
+            System.out.println(Thread.currentThread().getName() + " in control");  
+        }  
+    }  
+}  
+-------------------------------------------------------------------------------------------------
+Example-4
+-----------------------
+public class JoinExample1 extends Thread  
+{    
+    public void run()  
+    {    
+        for(int i=1; i<=4; i++)  
+        {    
+            try  
+            {    
+                Thread.sleep(500);    
+            }catch(Exception e){System.out.println(e);}    
+            System.out.println(i);    
+        }    
+    }    
+    public static void main(String args[])  
+    {   
+        // creating three threads  
+        JoinExample1 t1 = new JoinExample1();    
+        JoinExample1 t2 = new JoinExample1();    
+        JoinExample1 t3 = new JoinExample1();    
+        // thread t1 starts  
+        t1.start();   
+        // starts second thread when first thread t1 is died.  
+        try  
+        {    
+            t1.join();    
+        }catch(Exception e){System.out.println(e);}    
+        // start t2 and t3 thread   
+        t2.start();   
+        t3.start();    
+    }    
+}  
+-------------------------------------------------------------------------------------------------------
+Example-5
+-------------------------
+package org.iiht.com;
+public class JoinExample1 extends Thread  
+{    
+    public void run()  
+    {    
+        for(int i=1; i<=4; i++)  
+        {    
+            try  
+            {    
+                Thread.sleep(500);    
+            }catch(Exception e){System.out.println(e);}    
+            System.out.println(Thread.currentThread().getName()+"  "+i);    
+        }    
+    }    
+    public static void main(String args[])  
+    {   
+        // creating three threads  
+        JoinExample1 t1 = new JoinExample1();    
+        JoinExample1 t2 = new JoinExample1();    
+        JoinExample1 t3 = new JoinExample1();    
+        // thread t1 starts  
+        t1.start();   
+        // starts second thread when first thread t1 is died.  
+        try  
+        {    
+            t1.join();    
+        }catch(Exception e){System.out.println(e);}    
+        // start t2 and t3 thread   
+        t2.start();   
+        t3.start();    
+    }    
+}  
+----------------------------------------------------------------------------
+Example-6
+--------------------
+public class JavaSuspendExp extends Thread
+ {
+	public void run() {
+		for (int i = 1; i < 5; i++) {
+			try {
+				// thread to sleep for 500 milliseconds
+				sleep(500);
+				System.out.println(Thread.currentThread().getName());
+			} catch (InterruptedException e) {
+				System.out.println(e);
+			}
+			System.out.println(i);
+		}
+	}
+
+	public static void main(String args[]) {
+		// creating three threads
+		JavaSuspendExp t1 = new JavaSuspendExp();
+		JavaSuspendExp t2 = new JavaSuspendExp();
+		JavaSuspendExp t3 = new JavaSuspendExp();
+		// call run() method
+		t1.start();
+		t2.start();
+		// suspend t2 thread
+		t2.suspend();
+		t2.resume();
+		// call run() method
+		t3.start();
+	}
+}
+----------------------------------------------------------------------------
+Example-7
+------------------
+package org.iiht.com;
+class Second implements Runnable
+{
+	synchronized public void run()
+	{
+		try
+		{
+			Thread t=Thread.currentThread();
+			String name=t.getName();
+			for(int i=0;i<10;i++)
+			{
+				System.out.println(name+"="+i);
+				Thread.sleep(500);
+				if(name.equals("raj") && (i==4))
+				{
+					wait();
+				}
+				if(name.equals("geeta") && (i==4))
+				{
+					wait();
+				}
+				if(name.equals("seeta") && (i==6))
+				{
+					System.out.println("raj and geeta thread wakes up...");
+					notifyAll();
+
+				}
+				if(name.equals("raj") && (i==9))
+				{
+					notify();
+				}	}
+		}catch(Exception e){}
+	}
+	public static void main(String args[]) throws Exception
+	{ 
+		Second obj=new Second();
+		Thread t1=new Thread(obj,"raj");
+		Thread t2=new Thread(obj,"seeta");
+		Thread t3=new Thread(obj,"geeta");
+		t1.start();
+		t2.start();
+		t3.start();
+	}}
+--------------------------------------------------------------
 
 
 
