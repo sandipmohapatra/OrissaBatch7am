@@ -1,0 +1,59 @@
+Typescript
+---------------------
+This was developed by facebook.Our browser doesnot support typescript so we have to convert it into javascript.
+The extention for typescript is .ts.where as the extention for javascript is .js.
+We have to compile the typescript and after compilation .ts is converted into .js .
+AngularJS use typescript as a scripting language. 
+--------------------
+example1.ts
+--------------------
+console.log("Welcome to typescript");
+console.log("At Be-practical");
+----------------------------
+step 1:- npm install typescript
+--------------------------------------------------------------------------------------
+step 2:-
+to compile :- tsc example1.ts
+after compilation example1.js will be automatically created.
+--------------------------------------------------------------------------------------
+step 3:-
+to run :- node example1.js
+--------------------------------------------------------------------
+example2.ts
+--------------------
+function f1()
+{
+let x=10;
+if(x==10)
+{
+var y=20;
+}
+console.log(`x=${x}\n y=${y}`);
+}
+
+f1();
+-------------------------------------------------------------
+After compilation the .js created is
+---------------------------------------------------
+function f1() {
+    var x = 10;
+    if (x == 10) {
+        var y = 20;
+    }
+    console.log("x=".concat(x, "\n y=").concat(y));
+}
+f1();
+-------------------------------------------------------------------------------------
+example3.ts
+------------------------
+let username:string="Rakshita";
+let age:number=20;
+let address:string="Bangalore";
+console.log("Hello !"+"  "+username+"you be be "+(age+1) +"next year");
+console.log(`Your address is ${address}`);
+------------------------------------------------------------------------------------------------
+
+
+
+
+
