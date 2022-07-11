@@ -2052,7 +2052,38 @@ public static void main(String[] args)throws Exception
 }
 }
 -----------------------------------------------------------------------------------
-
+example-3(update data)
+------------------------------------------------
+package org.jdbctest;
+import java.sql.*;
+public class JdbcExample1 
+{
+public static void main(String[] args)throws Exception 
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver"); //loading the oracle driver 
+	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe", "system", "1234");
+	Statement st =con.createStatement();
+	st.execute("update beparctice set email='rakshita123@gmail.com' where empno=102");
+	System.out.println("row updated");
+}
+}
+-----------------------------------------------------------
+example-4(delete data)
+----------------------------------------
+package org.jdbctest;
+import java.sql.*;
+public class JdbcExample1 
+{
+public static void main(String[] args)throws Exception 
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver"); //loading the oracle driver 
+	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe", "system", "1234");
+	Statement st =con.createStatement();
+	st.execute("delete from beparctice where empno=102");
+	System.out.println("row deleted");
+}
+}
+------------------------------------------------------------------------------------------------
 
 
 
