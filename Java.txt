@@ -1652,7 +1652,7 @@ methods of Thread:-
 
 4)start():-Start a thread by calling the run method.
 
-5)yield():-this method pauses the currently executing thread temporarily for giving chance to the remaining waiting threads of same priority to execute. if there is no waiting thread or all the waiting thread have a lower
+5)yield():-this method pauses the currently executing thread temporarily for giving chance to the remaining waiting threads of same or high priority to execute. if there is no waiting thread or all the waiting thread have a lower
 priority then the same thread will continue its execution.
 
 6)join():-The join() method of thread class waits for a thread to die. It is used when you want one thread to wait for completion of another. This process is like a relay race where the second runner waits until the first runner comes and hand over the flag to him.
@@ -1995,13 +1995,63 @@ class Second implements Runnable
 	}}
 ---------------------------------------------------------------------------------------
 
+wap to create three threads totendra,swarna,rakshita and execute in the same order.
+first totendra should execute, then swarna and then rakshita.
+----------------------------------------------------------------------------------------------------------------------------
+html,css,java-script,bootstrap,angular10
+core-java,jdbc,jsp,servlet,Hibernate,oracle10
+project
+spring,springboot,jpa,angular10--------------fullstack
+-------------------------------------------------------------------------------
+Java Database Connectivity
+----------------------------------------------------------------------------------------------------------------------
+Java (byte code)------<--->-------Driver(Interpreter)------<------>------Oracle/Mysql(ASCII code)
+-------------------------------------------------------------------------------------------------------------------------
+step to connect java to the database
+-------------------------------------------------
+1)load the driver------present in the oracle
+2)create connection.
+3)statement
+4)execute()
+--------------------------------------------------------------------------
+we have some library files required---ojdbc14.jar
+It contains JDBC API.
+---------------------------------------------------------------------------
+C:\oraclexe\app\oracle\product\10.2.0\server\jdbc\lib\ojdbc14.jar
+---------------------------------------------------------------------------------------
+example-1(create table)
+------------------------------------
+package org.jdbctest;
+import java.sql.*;
+public class JdbcExample1 
+{
+public static void main(String[] args)throws Exception 
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver"); //loading the oracle driver 
+	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe", "system", "1234");
+	Statement st =con.createStatement();
+	st.execute("create table beparctice(empno number,name varchar2(30),email varchar2(30))");
+	System.out.println("table created");
+}
+}
 
-
-
-
-
-
-
+---------------------------------------------------------
+example-2(inserting data)
+----------------------------------------------
+package org.jdbctest;
+import java.sql.*;
+public class JdbcExample1 
+{
+public static void main(String[] args)throws Exception 
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver"); //loading the oracle driver 
+	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe", "system", "1234");
+	Statement st =con.createStatement();
+	st.execute("insert into beparctice values(102,'rakshita','rakshita@gmail.com')");
+	System.out.println("row inserted");
+}
+}
+-----------------------------------------------------------------------------------
 
 
 
