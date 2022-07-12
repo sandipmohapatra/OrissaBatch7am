@@ -2084,6 +2084,32 @@ public static void main(String[] args)throws Exception
 }
 }
 ------------------------------------------------------------------------------------------------
-
+Dynamic insert/update/delete/select
+-----------------------------------------------------------------
+example-5
+--------------------------
+package org.jdbctest;
+import java.sql.*;
+import java.util.*;
+public class JdbcExample1 
+{
+public static void main(String[] args)throws Exception 
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter empno,name and email");
+	int empno=ob.nextInt();
+	String name=ob.next();
+	String email=ob.next();
+	Class.forName("oracle.jdbc.driver.OracleDriver"); //loading the oracle driver 
+	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe", "system", "1234");
+	PreparedStatement st =con.prepareStatement("insert into beparctice values(?,?,?)");
+	st.setInt(1, empno);
+	st.setString(2, name);
+	st.setString(3,email);
+	st.execute();
+	System.out.println("row inserted");
+}
+}
+-----------------------------------------------------------------------------------------------
 
 
