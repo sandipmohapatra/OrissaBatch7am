@@ -2111,7 +2111,7 @@ public static void main(String[] args)throws Exception
 }
 }
 -----------------------------------------------------------------------------------------------
-example-6
+example-6(update the email whose empno you give)
 -----------------
 package org.jdbctest;
 import java.sql.*;
