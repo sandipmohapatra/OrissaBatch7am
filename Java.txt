@@ -2155,4 +2155,62 @@ public static void main(String[] args)throws Exception
 }
 }
 -----------------------------------------------------------------------------------------
+selecting the data :-
+---------------------------
+ResultSet rs ---This will store the whole table a pointer will be created which will go to the next record.we have to use while loop.
+while(rs.next())
+{
+print(rs.getInt(1)+"  "+rs.getString(2)+" "+rs.getString(3));
+}
+------------------------------------------------------------------------
+example-8
+------------------
+package org.jdbctest;
+import java.sql.*;
+public class JdbcExample1 
+{
+public static void main(String[] args)throws Exception 
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver"); 
+	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe", "system", "1234");
+	PreparedStatement st =con.prepareStatement("select * from beparctice");
+	ResultSet rs=st.executeQuery();
+	while(rs.next())
+	{
+	System.out.println(rs.getInt(1)+"  "+rs.getString(2)+" "+rs.getString(3));
+	}
+}
+}
+---------------------------------------------------------
+create table :-
+1)create table beparctice(empno number,name varchar2(30),email varchar2(30));
+
+inserting data:-
+2)insert into beparctice values(102,'rakshita','rakshita@gmail.com');
+
+select the data of the table:-
+3)select * from beparctice;
+
+update data of the table:-
+4)update beparctice set email='rakshita123@gmail.com' where empno=102;
+
+delete data:-
+5)delete from beparctice where empno=101;
+----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
