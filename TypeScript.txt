@@ -114,9 +114,25 @@ else
 {
 console.log("The email is valid");
 }
+----------------------------------------------------
+*-1 indicates not present
 ----------------------------------------------------------------------------
-
-
+example-8
+----------------------
+let x:string="This is swarna's email swarna@gmail.com";
+if(x.includes("swarna"))
+{
+console.log("This is about swarna");
+}
+else if(x.includes("pratiksha"))
+{
+console.log("This is about pratiksha");
+}
+else
+{
+console.log("This is about other students");
+}
+-----------------------------------------------------------------------------------------------------------
 
 
 
