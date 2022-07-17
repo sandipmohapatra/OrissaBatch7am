@@ -87,8 +87,34 @@ else
 console.log("The example is of  NodeJs");
 }
 ------------------------------------------------------------------------------------
-
-
+example-6
+-------------------
+var x="This is typescript";
+if(x.endsWith("typescript"))
+{
+console.log("The example is of Typescript");
+}
+else if(x.endsWith("javascript"))
+{
+console.log("The example is of Javascript");
+}
+else
+{
+console.log("The example is of  NodeJs");
+}
+------------------------------------------------------------------------------
+example-7
+-----------------------
+var x="swarna@gmail.com";
+if(x.indexOf("@")==-1)
+{
+console.log("The email is invalid");
+}
+else
+{
+console.log("The email is valid");
+}
+----------------------------------------------------------------------------
 
 
 
