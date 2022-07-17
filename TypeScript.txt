@@ -133,6 +133,19 @@ else
 console.log("This is about other students");
 }
 -----------------------------------------------------------------------------------------------------------
+example-9
+------------------
+let x:string="SamsungTV,45000.34,InStock";
+let data:string[]=x.split(',');
+for(var value of data)
+{
+console.log(value);
+}
+
+console.log(`Name = ${data[0]}`);
+console.log(`Price = ${data[1]}`);
+console.log(`Instock Or Not = ${data[2]}`);
+------------------------------------------------------------------------
 
 
 
