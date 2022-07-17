@@ -4,6 +4,7 @@ This was developed by facebook.Our browser doesnot support typescript so we have
 The extention for typescript is .ts.where as the extention for javascript is .js.
 We have to compile the typescript and after compilation .ts is converted into .js .
 AngularJS use typescript as a scripting language. 
+data type of Typescript is let.where as the datatype of Javascript is var.
 --------------------
 example1.ts
 --------------------
@@ -52,6 +53,29 @@ let address:string="Bangalore";
 console.log("Hello !"+"  "+username+"you be be "+(age+1) +"next year");
 console.log(`Your address is ${address}`);
 ------------------------------------------------------------------------------------------------
+step 1:- npm install typescript
+step 2:-notepad example1.ts
+step 3:-compile ----tsc example1.ts
+step 4:-to run ----node example1.js
+-----------------------------------------------------------------------------
+example-4
+-----------------
+var user="Sandip";
+var firstChar=user.charCodeAt(0);
+if(firstChar >=65 && firstChar <=90)
+{
+console.log("Hello ! "+user);
+}
+else
+{
+console.error("Error :Name must start with Uppercase Letter");
+}
+-------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 
