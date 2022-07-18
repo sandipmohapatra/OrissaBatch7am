@@ -2236,6 +2236,54 @@ out.println("<br>");
  out.println("<br>");
   out.println("The address is "+c);%>
 ----------------------------------------------------------------------------
+example-2
+------------------
+<html>
+<body bgcolor=cyan>
+<h1><center>Calculator Example</center></h1><hr>
+<form action=second.jsp>
+<table>
+<tr><td>Enter a number<td><input type=text name=t1 size=20></tr>
+<tr><td>Enter a number<td><input type=text name=t2 size=20></tr>
+<tr><td><td>
+<input type=submit name=b1 value=sum>
+<input type=submit name=b1 value=sub>
+<input type=submit name=b1 value=mul>
+<input type=submit name=b1 value=div>
+</tr>
+</table></form>
+</body></html>
+------------------------------------------------
+<%String a =request.getParameter("t1");
+String b =request.getParameter("t2");
+String but =request.getParameter("b1");%>
+
+<%if(but.equals("sum"))
+{
+int result=Integer.parseInt(a)+Integer.parseInt(b);
+out.println("The result is "+result);
+}
+else if(but.equals("sub"))
+{
+int result=Integer.parseInt(a)-Integer.parseInt(b);
+out.println("The result is "+result);
+}
+else if(but.equals("mul"))
+{
+int result=Integer.parseInt(a)*Integer.parseInt(b);
+out.println("The result is "+result);
+}
+else if(but.equals("div"))
+{
+int result=Integer.parseInt(a)/Integer.parseInt(b);
+out.println("The result is "+result);
+}
+else
+{
+	out.println("Invalid Input");
+}
+%>
+--------------------------------------------------------------------
 
 
 
