@@ -2537,6 +2537,68 @@ catch(Exception ae)
 %>
 
 -------------------------------------------------------------------------------------------------
+servlet:-
+There are 2 types of servlet
+1)generic servlet:- It can respond to any type of protocal.
+2)HTTP servlet:- It can respond to http protocals.
+--------------------------------------
+request comes from client (html><----->server (accept the request and process it then send the reponse) 
+-----------------------------------------------
+example-1
+-----------------
+<html>
+<body bgcolor=cyan>
+<h1><center>Student DataBase</center></h1><hr>
+<form action="second">
+<table>
+<tr><td>Enter rollno<td><input type=text name=t1 size=20></tr>
+<tr><td>Enter name<td><input type=text name=t2 size=20></tr>
+<tr><td>Enter address<td><input type=text name=t3 size=20></tr>
+<tr><td><td>
+<input type=submit name=b1 value=insert>
+<input type=submit name=b1 value=update>
+<input type=submit name=b1 value=delete>
+<input type=submit name=b1 value=select>
+</tr>
+</table></form>
+</body></html>
+-----------------------------------------------
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+@WebServlet("/second")
+public class second extends GenericServlet 
+{
+public void init()
+{
+	System.out.println("this is init");
+}
+	@Override
+	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException
+{
+		PrintWriter pw=res.getWriter();
+		res.setContentType("text/html");
+		String a=req.getParameter("t1");
+		String b=req.getParameter("t2");
+		String c=req.getParameter("t3");
+		pw.println("the rollno is "+a);
+		pw.println("the name is "+b);
+		pw.println("the address is "+c);
+			}
+	
+	public void destroy()
+	{
+		System.out.println("this is destroy");
+	}
+	
+}
+------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 
