@@ -2549,7 +2549,7 @@ example-1
 <html>
 <body bgcolor=cyan>
 <h1><center>Student DataBase</center></h1><hr>
-<form action="second">
+<form action="second" method=get>
 <table>
 <tr><td>Enter rollno<td><input type=text name=t1 size=20></tr>
 <tr><td>Enter name<td><input type=text name=t2 size=20></tr>
@@ -2593,9 +2593,27 @@ public void init()
 	
 }
 ------------------------------------------------------------------------
+what is the lifecycle method of GenericServlet
 
+public void int()---memory blocks are initialized.It will work for one time when you start the program.
 
+public void service()----It will take the request and give the response.
 
+public void destroy()----It will delete the memory blocks which was created by init().
+---------------------------------------------------------------------------------------------------------------------
+what is the lifecycle method of  HttpServlet
+
+public void int()---memory blocks are initialized.It will work for one time when you start the program.
+
+public void service/doGet/doPost()----It will take the request and give the response.
+
+public void destroy()----It will delete the memory blocks which was created by init().
+---------------------------------------------------------------------------------------------------------------------
+doGet() :- The data will be displayed on the URL.It is not secured.
+doPost():- The data will not be displayed on the URL.It is secured.
+
+<form action="second" method=get/post>
+--------------------------------------------------------------------------------------------
 
 
 
