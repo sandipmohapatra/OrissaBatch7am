@@ -172,7 +172,30 @@ else
 console.log("Name ="+Name +"\n Price ="+Price);
 }
 --------------------------------------------------------------------------------------------
+example-12
+------------------------
+let Name:string|null =prompt("Enter your name");
+let Address:string =prompt("Enter your address");
 
+if(Name==null)
+{
+console.log("Name is Null");
+}
+else if(Name=="" && Address=="")
+{
+console.log("Name and Address is empty");
+}
+else
+{
+console.log("Hello !"+Name);
+}
+-----------------------------------------------------------------------------
+<html>
+<head>
+<script src="example12.js"></script>
+</head>
+</html>
+----------------------------------------------------------------------------------
 
 
 
