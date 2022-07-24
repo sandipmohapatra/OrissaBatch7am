@@ -259,6 +259,66 @@ console.log(`${property} : ${x[property]}`);
 
 PrintList();
 -------------------------------------------------------------------
+example-19
+-----------------
+interface IProduct
+{
+Name:string;
+Price:number;
+Instock:boolean;
+}
+
+function getdata<T>(obj:T)
+{
+for(var property in obj)
+{
+console.log(`${property} : ${obj[property]}`);
+}
+}
+
+getdata<IProduct>({Name:'Samsung TV',Price :35000,Instock:true});
+
+getdata<IProduct>({Name:'Samsung Fridge',Price :45000,Instock:false});
+
+--------------------------------
+interface is a keyword  in typescript is similar to structure in c.
+It is a datatype having a mixture of datatypes.
+---------------------------------------------------------------------------------------------------------- 
+example- 20
+---------------------------
+interface IProduct
+{
+Name:string;
+Price:number;
+Instock:boolean;
+}
+
+interface IEmployee
+{
+Name:string;
+Salary:number;
+Address:string;
+Age:number;
+}
+
+
+function getdata<T>(obj:T)
+{
+for(var property in obj)
+{
+console.log(`${property} : ${obj[property]}`);
+}
+}
+
+getdata<IProduct>({Name:'Samsung TV',Price :35000,Instock:true});
+
+getdata<IProduct>({Name:'Samsung Fridge',Price :45000,Instock:false});
+
+getdata< IEmployee>({Name:'sandip',Salary :45000,Address:"Banglore",Age:35});
+
+getdata< IEmployee>({Name:'Totendra',Salary :45000,Address:"Banglore",Age:20});
+
+---------------------------------------------------------------------------------------------------------------------
 
 
 
