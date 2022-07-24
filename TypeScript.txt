@@ -235,7 +235,30 @@ console.log(x[2]);
 console.log(x[3]);
 console.log(x[4]);
 console.log(x[5]);
-
 ----------------------------------------------------------------------------
+example-17
+---------------------
+let x:any[] = [1,2,3,"sandip","akshaya",[1,2,3,4],4];
+for(var property in x)
+{
+console.log(`${property} : ${x[property]}`);
+}
+
+-------------------------------------------------------------
+example-18
+----------------------
+let x:string[] = ["electronics","fashion","footwear"];
+
+function PrintList()
+{
+for(var property in x)
+{
+console.log(`${property} : ${x[property]}`);
+}
+}
+
+PrintList();
+-------------------------------------------------------------------
+
 
 
