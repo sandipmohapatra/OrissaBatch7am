@@ -159,6 +159,19 @@ console.log("wrong password");
 }
 
 --------------------------------------------------------------------------------
+example-11
+-----------------------
+let Name="Samsung TV";
+let Price=45000.00;
+if(Price==undefined)
+{
+console.log("Name ="+Name);
+}
+else
+{
+console.log("Name ="+Name +"\n Price ="+Price);
+}
+--------------------------------------------------------------------------------------------
 
 
 
