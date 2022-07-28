@@ -2715,6 +2715,48 @@ add the jar file:- servletapi.jar ----comcat ---lib
 
 ojdbc14.jar paste in web-inf----lib
 --------------------------------------------------------------------------------------
+sendRedirect():- It will redirect a html page if the condition is satisfied.
+example:- we have a login page if the username/password is correct it will redirect to student database page.
+---------------------------------------------------------------------------
+example-3
+--------------------
+<html>
+<body bgcolor=cyan>
+<h1><center>Student Login Page</center></h1><hr>
+<form action=Login method=get>
+<table>
+<tr><td>Enter your name<td><input type=text name=t1 size=20></tr>
+<tr><td>Enter your password<td><input type=password name=t2 size=20></tr>
+<tr><td><td><input type=submit value=submit></tr>
+</table>
+</form>
+</body>
+</html>
+--------------------------------------------------------------------------------------
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+@WebServlet("/Login")
+public class Login extends HttpServlet 
+{
+public void doGet(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException
+{
+	PrintWriter pw=res.getWriter();
+	res.setContentType("text/html");
+	String a=req.getParameter("t1");
+	String b=req.getParameter("t2");
+	if(a.equals("swarna")&& b.equals("swarna"))
+			{
+		res.sendRedirect("First.html");
+			}
+	else
+	{
+		res.sendRedirect("login.html");
+	}
+}
+}
+--------------------------------------------------------------------------------------------------
 
 
 
