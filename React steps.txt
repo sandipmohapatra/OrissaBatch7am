@@ -1,0 +1,89 @@
+steps to create a react application
+---------------------------------------------------
+step1:- create a folder
+
+step 2:- npm install -g create-react-app
+
+step 3:- create-react-app helloworld
+
+step 4:-cd helloworld
+
+step 5:-npm start
+-----------------------------------------------------------
+step 6:-localhost:3000
+---------------------------------------------------------
+automatically the 
+1)app.js
+2)app.css are created .modify these files according to your requirements.
+3)node_module is created .It contains the library file.
+4)index.html 
+5)package.json :- it conatins the library versions installed.
+6)main.js
+-----------------------------------------------------------------------------
+
+example-1
+-----------------------
+app.js
+------------------
+import React, {Component} from 'react';
+import './App.css';
+
+class App extends Component
+{
+render()
+{
+  return(
+<div className='App'>
+<h1>Hello Welcome to React JS</h1><hr></hr>
+<table>
+<tr><td>Enter your Name</td><td><input type="text" name="t1" size="20"/></td></tr>
+<tr><td>Enter your Address</td><td><input type="text" name="t2" size="20"/></td></tr>
+<tr><td>Enter your Phoneno</td><td><input type="text" name="t3" size="20"/></td></tr>
+<tr><td>Enter your Email</td><td><input type="text" name="t4" size="20"/></td></tr>
+<tr><td></td><td><input type="submit" value="submit"/></td></tr>
+</table>
+<h2>The sum is {12+5}</h2>
+<h2>The subtraction {12-5}</h2>
+<h2>The multipliaction {12*5}</h2>
+<h2>The division is {12 / 6}</h2>
+
+</div>
+  );
+}
+}
+
+export default App;
+--------------------------------------------------------------------------------------------------------------
+app.css
+---------------
+h1{
+  color:red;
+}
+----------------------------------------------
+to see the o/p:- localhost:3000
+-------------------------------------------------
+Features of React
+--------------------------
+1)JSX
+2)Components
+3)One-way Data Binding
+4)Virtual DOM
+5)performance
+6)simplicity
+----------------------------------------------
+1)JSX stands for javascript XML. It is a Javascript with XML and HTML syntax.
+This syntax is processed into javascript and called Rect Framework.
+
+2)ReactJs is all about components.React Js application is made of multiple components,and each component has its own logic and controls.
+ 
+
+
+
+
+
+
+
+
+
+
+
