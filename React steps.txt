@@ -188,6 +188,30 @@ root.render(
 reportWebVitals();
 
 ----------------------------------------------------------------------------------------
+example-5
+---------------------
+inline css example
+------------------------------
+import React, {Component} from 'react';
+class App4 extends Component
+{
+render()
+{
+ var mystyle={
+    fontSize:20,
+    color:'green'
+}
+  return(
+    <div>
+<h3 style ={mystyle}>Welcome to ReactJs </h3>
+<h3 style ={mystyle}>Welcome to ReactJs on Weekend Batch</h3>
+    </div>
+  );
+}
+}
+
+export default App4;
+--------------------------------------------
 
 
 
