@@ -1,0 +1,11 @@
+New India Insurance 
+---------------------------------
+1)register
+2)view insurance policy
+3)buy a  policy
+4)agent regsitration
+5)feedback form
+6)Reports generation
+--------------------------------------------------------------
+BootStrap,html,css,javascript,jsp/servlet,jdbc
+--------------------------------------------------------------
