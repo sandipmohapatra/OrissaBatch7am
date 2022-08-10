@@ -2893,5 +2893,106 @@ catch(Exception ae)
 {}
 }}
 ----------------------------------------------------------------------------------
+Array:- It is a collection of similar data type
+example to declare an array:-
+int a[]=new int[5];
+String car[]=new String[3];
+-------------------------------------------------------
+
+example-
+import java.util.*;
+public class Array1 
+{
+public static void main(String[] args)
+{
+int a[]=new int[5];
+String car[]=new String[3];
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter 5 nos");
+for(int i=0;i<5;i++)
+	a[i]=ob.nextInt();
+
+System.out.println("Enter 3 cars");
+for(int i=0;i<3;i++)
+	car[i]=ob.next();
+
+System.out.println("The 5 numbers are ");
+for(int i=0;i<5;i++)
+	System.out.println(a[i]);
+
+System.out.println("The 3 strings are ");
+for(int i=0;i<3;i++)
+	System.out.println(car[i]);
+
+}
+}
+------------------------------------------------------------------------------------------------
+
+wap to find the sum of 5 nos in an array.
+---------------------------------------------------------------------
+//array :- array is a collection of similar data type.
+//array of integer,float,double,string,etc
+
+import java.util.*;
+public class Array1 
+{
+public static void main(String[] args)
+{
+int a[]=new int[5]; 
+int sum=0;
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter 5 nos");
+for(int i=0;i<5;i++)
+{
+	a[i]=ob.nextInt();
+sum=sum+a[i];
+}
+System.out.println("The sum of  5 numbers is "+sum);
+
+}
+}
+-------------------------------------------------------------
+String :- It is derived datatype.
+It is also a class in java
+we have 3 similar classes.
+1)String:-It is Immutable.(Cannot be changed)
+2)StringBuffer:-mutable(can be changed)
+3)StringBuilder:-mutable (can be changed)
+------------------------------------------------------------------------------------------------------------------
+
+example-2
+----------------
+package org.stringdemo;
+
+public class StringDemo2 {
+public static void main(String[] args) 
+{
+	String s1="Wipro Software Solution";
+	String s2="WiprO Software Solution";
+	System.out.println("the string is "+s1);
+	System.out.println("the upper case string is "+s1.toUpperCase());
+	System.out.println("the lower case string is "+s1.toLowerCase());
+	System.out.println("the indexOf string is "+s1.indexOf('W'));
+	System.out.println("the indexOf string is "+s1.indexOf('i'));
+	System.out.println("the indexOf string is "+s1.lastIndexOf('S'));
+	System.out.println("the equal string is "+s1.equals(s2));
+	System.out.println("the equal string is "+s1.equalsIgnoreCase(s2));
+	System.out.println("the substring string is "+s1.substring(1));
+	System.out.println("the substring string is "+s1.substring(0,5));
+	System.out.println("the charAt string is "+s1.charAt(0));
+	System.out.println("the charAt string is "+s1.charAt(1));
+	System.out.println("the startWith string is "+s1.startsWith("Wipro"));
+	System.out.println("the endsWith string is "+s1.endsWith("Solution"));
+	System.out.println("the Length of string is "+s1.length());
+	char x[]=s1.toCharArray();
+	int len=x.length;
+	for(int i=0;i<len;i++)
+	System.out.println(x[i]);
+	
+}
+}
+------------------------------------------------------------------------------- 
+
+
 
 
