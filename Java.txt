@@ -2993,6 +2993,139 @@ public static void main(String[] args)
 }
 ------------------------------------------------------------------------------- 
 
+Hibernate :- we will store data in the form of objects.(class)
+jdbc :- we will store data in the form of primative data type.(rollno,name,address)
+Hibernate is known as ORM tool.(object relational mapping) tool.
+---------------------------------------------------------------
+pojo class(plain old java object)
+-----------------------
+public class mypojo
+{
+	String uname,pword,address;
+
+	public String getUname() {
+		return uname;
+	}
+
+	public void setUname(String uname) {
+		this.uname = uname;
+	}
+
+	public String getPword() {
+		return pword;
+	}
+
+	public void setPword(String pword) {
+		this.pword = pword;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+}
+------------------------------------------------------------------------------
+<html>
+<h1><center>Registration Page</center></h1><hr>
+<form action=Login>
+<table border=1 align="center">
+<tr><td>enter name<td><input type="text" name="t1"></tr>
+<tr><td>enter password<td><input type="text" name="t2"></tr>
+ <tr><td>enter address<td><input type="text" name="t3"></tr>
+<tr><td><td><input type="submit" value="submit"></tr>
+</table>
+</form>
+</body>
+</html>
+-------------------------------------------------------------------
+<h1>Register Success</h1>
+------------------------------------------------
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import org.hibernate.*;
+import org.hibernate.cfg.*;
+import javax.servlet.annotation.*;
+@WebServlet("/Login")
+public class Login extends HttpServlet
+{	
+	public void service(HttpServletRequest req,HttpServletResponse res)
+			throws ServletException,IOException
+	{		
+	Transaction tx=null;
+	try
+		{	res.setContentType("text/html");
+			PrintWriter pw=res.getWriter();
+			String a=req.getParameter("t1");
+			String b=req.getParameter("t2");
+			String c=req.getParameter("t3");
+			Configuration cfg=new Configuration();
+			SessionFactory sf=cfg.configure().buildSessionFactory();
+			Session ss=sf.openSession();
+			mypojo pojo=new mypojo();
+			pojo.setUname(a);
+			pojo.setPword(b);
+			pojo.setAddress(c);
+			tx=ss.beginTransaction();
+			ss.save(pojo);//data will be saved into the database
+			tx.commit();
+			ss.close();
+			res.sendRedirect("success.html");
+		}
+		catch(Exception ae)
+		{	
+			tx.rollback();	
+			}	
+	
+	}}
+-------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//hibernate/hibernateconfiguration dtd2.0//en"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="connection.url">jdbc:mysql://localhost:3306/batch2pm</property>
+  <property name="connection.username">root</property>
+  <property name="connection.password">1234</property>
+  <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="hibernate.hbm2ddl.auto">update</property>
+<property name="show_sql">true</property>
+<mapping resource="hansika.hbm.xml"></mapping>
+</session-factory>
+</hibernate-configuration>
+------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//hibernate/hibernate mapping dtd2.0//en"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="mypojo" table="batch2pm">
+<id name="uname" column="uname" type="string">
+<generator class ="assigned"></generator></id>
+<property name="pword" type="string" column="pword" />
+<property name="address" type="string" />
+</class>
+</hibernate-mapping>
+---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
