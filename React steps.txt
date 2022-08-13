@@ -212,9 +212,317 @@ render()
 
 export default App4;
 --------------------------------------------
+example-6
+--------------------
+import React,{Component} from 'react';
+class App extends Component{
+  render(){
+    return(
+    <div>
+<h1 className="MyReact">{35+56}</h1>
 
+    </div>
+    );
+  }
+}
 
+export default App;
+--------------------------------------------------
+React Component
+---------------------------------
+Every react component is a core building block of the react application.
+Every react component have their own structure ,methods as well as APIs.
+They can be reused as per requirement.
+ Here root is the starting component, and each of the other pieces becomes branches which are further divided into sub branches.
 
+There are two types of components in react.
+1)functional component:- It is also known as stateless component because they do not hold or manage state.
+2)class component:- They are more complex than functional components.It is required to extend from React.Component.
+we can create a class by defining a class that extends component and has a render function.
+The class component is also known as stateful component  because that can hold or manage the local state.
+------------------------------------------------------------------------------
+example-7
+----------------
+import React,{ Component } from 'react';
+import './App.css';
+class App extends React.Component{
+  render(){
+    return(
+    <div>
+<h1><center>Example of class</center> </h1>
+<First/>
+<Second/>
+    </div>
+    );
+  }
+}
+class First extends React.Component{
+  render() {
+    return(
+<div>
+<h2>This is an example of First React class Component</h2>
+</div>
+    );
+  }
+}
+class Second extends React.Component{
+  render()  {
+    return(
+<div>
+<h2>This is an example of Second React class Component</h2>
+</div>
+    );
+  }
+}
 
+export default App;
+------------------------------------------------------------------
+The class component is also known as stateful component  because that can hold or manage the local state.
+state :-
+1)State can be changed and mutable.
+2)It cannot be accessed by child component.
+3)It cannot make component reusable.
+4)Stateless component cannot have state.
+props:-
+1)props are readonly and immutable
+2)It can be accesed by child component.
+3)It  make component reusable.
+4)Stateless component can have props.
+----------------------------------------------------------------------------------
+constructor():- It is a method used to initialize an object state in a class.It is automatically called during the creation of an object in a class.It is called before the component is mounted.
+---------------------------------------------------------------------------------------------------
+React Map :- it is  a collection type where data is stored in the form of pairs.It contains a unique key.The value stored in the map should be mapped to the key.It cannot store dupilcate pair in the map.It is used for storing and searching of data.
+---------------------------------------------------------------------------
 
+example-8
+----------------------
+import React, { Component } from 'react';  
+class App extends React.Component {  
+ constructor() {  
+      super();  
+      this.state = {  
+         data:   
+         [  { "name":"Akshya" ,"address":"Bangalore"},{"name":"Partiksha","address":"Bangalore"},{"name":"Sandip","address":"Bangalore"}]  
+      }  
+   }  
+   render() {  
+      return (  
+         <div>  
+            <StudentName/>  
+            <ul>            
+                {this.state.data.map((item) => <List data = {item} />)}           
+            </ul>  
+         </div>  
+      );  
+   }  
+}  
+class StudentName extends React.Component {  
+   render() {  
+      return (  
+         <div>  
+            <h1>Student Name Detail</h1>  
+         </div>  
+      );  
+   }  
+}  
+class List extends React.Component {  
+   render() {  
+      return (  
+         <ul>            
+            <li>{this.props.data.name} stays in {this.props.data.address}</li>   
+            
+         </ul>  
+      );  
+   }  
+}  
+
+export default App;  
+---------------------------------------------------------------------------
+
+Changing the state:-
+We can change the component state by using the setState() method and passing a new state object as the argument. Now, create a new method toggleDisplayBio() in the above example and bind this keyword to the toggleDisplayBio() method otherwise we can't access this inside toggleDisplayBio() method.
+--------------------------------------------------
+example-9
+---------------------
+import React, { Component } from 'react';  
+class App extends React.Component {  
+ constructor() {  
+      super();        
+      this.state = { displayBio: false };  
+      console.log('Component this', this);  
+      this.toggleDisplayBio = this.toggleDisplayBio.bind(this);  
+      }  
+      toggleDisplayBio(){  
+          this.setState({displayBio: !this.state.displayBio});  
+          }  
+      render() {  
+          return (  
+              <div>  
+                  <h1>Welcome to React Js!!</h1>  
+                  {  
+                      this.state.displayBio ? (   
+                          <div>  
+                              <p><h4>ReactJs is one of the best Frontend Available in the market.</h4></p>  
+                              <button onClick={this.toggleDisplayBio}> Show Less </button>  
+                        </div>  
+                          ) : (  
+                              <div>  
+                                  <button onClick={this.toggleDisplayBio}> Read More </button>  
+                              </div>  
+                          )  
+                  }  
+             </div>  
+        )  
+    }  
+}  
+export default App;  
+--------------------------------------------------------------------------------------------------
+example-10
+-------------------------
+loops array in react
+------------------------------------------------
+import React from 'react';  
+     
+function App() {  
+     
+  const myArray = ['January', 'February', 'March', 'April', 'May','June'];  
+    
+  return (  
+    <div className="container">     
+        <h1> Example of React Map Loop </h1>  
+     
+        {myArray.map(name => (  
+          <li>  
+            {name}  
+          </li>  
+        ))}  
+     
+    </div>  
+  );  
+}  
+     
+export default App;  
+-----------------------------------------------------------------------------------
+example-11
+-------------------
+import React from 'react';  
+    
+function App() {  
+    
+ const students = [  
+              {  
+                'id': 1,   
+                'name': 'Jack',   
+                'email': 'jack@gmail.com'  
+              },  
+              {  
+                'id': 2,   
+                'name': 'Mary',   
+                'email': 'mary@gmail.com'  
+              },  
+              {  
+                'id': 3,   
+                'name': 'John',   
+                'email': 'john@gmail.com'  
+              },  
+          ];  
+    
+  return (  
+    <div className="container">  
+        <h1> Example of React Map Loop </h1>  
+     
+        <table className="table table-bordered">  
+            <tr>  
+                <th>ID</th>  
+                <th>Name</th>  
+                <th>Email</th>  
+            </tr>  
+    
+            {students.map((student, index) => (  
+              <tr data-index={index}>  
+                <td>{student.id}</td>  
+                <td>{student.name}</td>  
+                <td>{student.email}</td>  
+              </tr>  
+            ))}  
+    
+        </table>  
+    
+    </div>  
+  );  
+}  
+    
+export default App;  
+---------------------------------------------------------------------------------------------------------------------
+React Axios Delete Request Example
+------------------------------------------------------------------------------
+npm install axios
+------------------------------------------------
+Axios :- It is used for http delete request.We have to use the React library.It can build the interface which can send the http request from our application.
+--------------------------------------------------------------------------------------------------------------
+example-12
+-----------------------------------------------
+import React from 'react';  
+    
+import axios from 'axios';  
+    
+export default class PostList extends React.Component {  
+  state = {  
+    posts: []  
+  }  
+    
+  componentDidMount() {  
+    axios.get(`https://jsonplaceholder.typicode.com/posts`)  
+      .then(res => {  
+        const posts = res.data;  
+        this.setState({ posts });  
+      })  
+  }  
+    
+  deleteRow(id, e){  
+    axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)  
+      .then(res => {  
+        console.log(res);  
+        console.log(res.data);  
+    
+        const posts = this.state.posts.filter(item => item.id !== id);  
+        this.setState({ posts });  
+      })  
+    
+  }  
+    
+  render() {  
+    return (  
+      <div>  
+        <h1> Example of React Axios Delete Request </h1>  
+    
+        <table className="table table-bordered">  
+            <thead>  
+              <tr>  
+                  <th>ID</th>  
+                  <th>Title</th>  
+                  <th>Body</th>  
+                  <th>Action</th>  
+              </tr>  
+            </thead>  
+    
+            <tbody>  
+              {this.state.posts.map((post) => (  
+                <tr>  
+                  <td>{post.id}</td>  
+                  <td>{post.title}</td>  
+                  <td>{post.body}</td>  
+                  <td>  
+                    <button className="btn btn-danger" onClick={(e) => this.deleteRow(post.id, e)}>Delete</button>  
+                  </td>  
+                </tr>  
+              ))}  
+            </tbody>  
+    
+        </table>  
+      </div>  
+    )  
+  }  
+}  
+--------------------------------------------------------------------------------------------
 
