@@ -525,4 +525,111 @@ export default class PostList extends React.Component {
   }  
 }  
 --------------------------------------------------------------------------------------------
+example-14
+-----------------------
+routing:- It is navigating to different pages.
+----------------------------------------------------------------
+home.jsx
+--------------------------
+import React,{ Component } from "react";
+
+class Home extends Component
+{
+render()
+{
+return(
+    <div>
+        <h1>Wwelcome to Home Page</h1>
+<table>
+<tr><td>Enter your Name</td><td><input type="text" name="t1" size="20"/></td></tr>
+<tr><td>Enter your Address</td><td><input type="text" name="t2" size="20"/></td></tr>
+<tr><td>Enter your Phoneno</td><td><input type="text" name="t3" size="20"/></td></tr>
+<tr><td></td><td><input type="submit" value="submit"/></td></tr>
+</table>
+
+    </div>
+);
+}}
+
+export default Home;
+-----------------------------------------------------------
+about.jsx
+-----------------------
+import React,{ Component } from "react";
+
+class About extends Component
+{
+render()
+{
+return(
+    <div>
+        <h1>welcome to About Page</h1>
+<table>
+<tr><td>Enter your Name</td><td><input type="text" name="t1" size="20"/></td></tr>
+<tr><td>Enter your Address</td><td><input type="text" name="t2" size="20"/></td></tr>
+<tr><td>Enter your Phoneno</td><td><input type="text" name="t3" size="20"/></td></tr>
+<tr><td></td><td><input type="submit" value="submit"/></td></tr>
+</table>
+
+    </div>
+);
+}}
+
+export default About;
+----------------------------------------------------------------
+topic.jsx 
+---------------------------
+import React,{ Component } from "react";
+
+class Topic extends Component
+{
+render()
+{
+return(
+    <div>
+    <h2>The Topics of  React.js are</h2>
+<ul>
+<li>Refs</li>
+<li>State</li>
+<li>Props</li>
+</ul>
+</div>
+);
+}}
+
+export default Topic;
+------------------------------------
+app.jsx
+------------------------
+import React,{ Component } from "react";
+import {BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Home from './Home';
+import About from './About';
+import Topics from './Topics';
+
+
+class App extends Component
+{
+render()
+{
+return(
+<Router>
+<div>
+<ul>
+<li><Link to="/">Home</Link></li>
+<li><Link to="/about">About</Link></li>
+<li><Link to="/topics">Topics</Link></li>
+</ul>
+<hr/>
+<Route exact path="/" component={Home}/>
+<Route exact path="/about" component={About}/>
+<Route exact path="/topics" component={Topics}/>
+</div>
+</Router>
+);
+}
+}
+export default App;
+-------------------------------------------------------------------------------------------------
+
 
