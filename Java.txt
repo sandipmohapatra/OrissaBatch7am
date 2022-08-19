@@ -3140,9 +3140,250 @@ System.out.println("to reverse="+s1.reverse());
 System.out.println(s1);
 }}
 -------------------------------------------------------------------------
+Collection Framework
+--------------------------------------
+1)It is a collection of objects.
+2)It expands memory and contrast memory automatically.
+3)we need not enter the size of the collection like we do in array.
+4)we have interface like set,list and map
+5)In set we cannot enter duplicate values.We have classes like TreeSet,HashSet,LinkedHashSet
+6)In list we can enter duplicate records.we have classes like LinkedList,ArrayList.
+7)In Map we enter key and value pair .We cannot enter key as duplicate.we have classes HashMap,HashTable.
+-----------------------------------------------------------------------------------
+example-1
+----------------------
+set
+------------- 
+TreeSet:- It will sort the data and display.
+------------------------------------------------------------
+import java.util.*;
+public class CollectionEx1
+{
+public static void main(String[] args)
+{
+TreeSet<Integer> ts=new TreeSet<Integer>();
+ts.add(20);
+ts.add(30);
+ts.add(10);
+ts.add(40);
+ts.add(50);
+ts.add(60);
+System.out.println(ts);
+}
+}
+--------------------------------------------------------------------------
+HashSet:- It displays the data in random order.
+-----------------------------------------------------------------
+import java.util.*;
+public class CollectionEx1
+{
+public static void main(String[] args)
+{
+HashSet<Integer> ts=new HashSet<Integer>();
+ts.add(20);
+ts.add(30);
+ts.add(10);
+ts.add(40);
+ts.add(50);
+ts.add(60);
+System.out.println(ts);
+}
+}
+-----------------------------------------------------------------------------------
+LinkedHashSet:- It display in the same order.
+-----------------------------------------------------------------
+import java.util.*;
+public class CollectionEx1
+{
+public static void main(String[] args)
+{
+LinkedHashSet<Integer> ts=new LinkedHashSet<Integer>();
+ts.add(20);
+ts.add(30);
+ts.add(10);
+ts.add(40);
+ts.add(50);
+ts.add(60);
+System.out.println(ts);
+}
+}
+---------------------------------------------------------------------------------------------------
+TreeSet
+------------------
+import java.util.*;
+public class CollectionEx1
+{
+public static void main(String[] args)
+{
+TreeSet<String> ts=new TreeSet<String>();
+ts.add("Elephant");
+ts.add("Apple");
+ts.add("Banana");
+ts.add("Cat");
+ts.add("Dog");
+ts.add("Swarna");
+System.out.println(ts);
+}
+}
+-----------------------------------------------------------------------------
+HashSet
+---------------------
+import java.util.*;
+public class CollectionEx1
+{
+public static void main(String[] args)
+{
+HashSet<String> ts=new HashSet<String>();
+ts.add("Elephant");
+ts.add("Apple");
+ts.add("Banana");
+ts.add("Cat");
+ts.add("Dog");
+ts.add("Swarna");
+System.out.println(ts);
+}
+}
+---------------------------------------------------------------------------
+LinkHashSet
+----------------------------
+import java.util.*;
+public class CollectionEx1
+{
+public static void main(String[] args)
+{
+LinkedHashSet<String> ts=new LinkedHashSet<String>();
+ts.add("Elephant");
+ts.add("Apple");
+ts.add("Banana");
+ts.add("Cat");
+ts.add("Dog");
+ts.add("Swarna");
+System.out.println(ts);
+}
+}
+-----------------------------------------------------------------------------------------------------
+LinkedList:- We can enter duplicate records
+-----------------------------------------------------------------
+import java.util.*;
+public class CollectionEx1
+{
+public static void main(String[] args)
+{
+LinkedList<String> ts=new LinkedList<String>();
+ts.add("Elephant");
+ts.add("Apple");
+ts.add("Banana");
+ts.add("Cat");
+ts.add("Dog");
+ts.add("Swarna");
+ts.add("Banana");
+ts.add("Cat");
+ts.add("Dog");
+ts.add("Swarna");
+System.out.println(ts);
+}
+}
+-------------------------------------------------------------------------------------------
+ArrayList:-It will display in the same order.
+---------------------------------------------------------------------
+import java.util.*;
+public class CollectionEx1
+{
+public static void main(String[] args)
+{
+ArrayList<String> ts=new ArrayList<String>();
+ts.add("Elephant");
+ts.add("Apple");
+ts.add("Banana");
+ts.add("Cat");
+ts.add("Dog");
+ts.add("Swarna");
+ts.add("Banana");
+ts.add("Cat");
+ts.add("Dog");
+ts.add("Swarna");
+System.out.println(ts);
+}
+}
+-------------------------------------------------------------------------------------
+Map:- It display in the key value pair.
+-------------------------------------------------------
+import java.util.*;
+public class CollectionEx1
+{
+public static void main(String[] args)
+{
+HashMap<Integer,String> ts=new HashMap<Integer,String>();
+ts.put(1,"swarna");
+ts.put(2,"binay");
+ts.put(3,"Rakshita");
+ts.put(4,"sandip");
+ts.put(5,"Pratiksha");
 
+System.out.println(ts);
+}
+}
+------------------------------------------------------------------------------------------------
+import java.util.*;
+public class CollectionEx1
+{
+public static void main(String[] args)
+{
+Hashtable<Integer,String> ts=new Hashtable<Integer,String>();
+ts.put(1,"swarna");
+ts.put(2,"binay");
+ts.put(3,"Rakshita");
+ts.put(4,"sandip");
+ts.put(4,"Kiran");
+ts.put(5,"Pratiksha");
 
+System.out.println(ts);
+}
+}
+---------------------------------------------------------------------------------------------------
+Project:-
+-------------------
 
+public class Student 
+{
+int rollno;
+String name,address;
+public Student(int rollno, String name, String address) 
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+@Override
+public String toString() {
+	return "Student [rollno=" + rollno + ", name=" + name + ", address=" + address + "]";
+}
+}
+------------------------------------------------
+import java.util.*;
+public class CollectionEx1
+{
+public static void main(String[] args)
+{
+	Student obj1=new Student(1,"swarna","Bangalore");
+	Student obj2=new Student(2,"Rakshita","Bangalore");
+	Student obj3=new Student(4,"pratiksha","Bangalore");
+	Student obj4=new Student(5,"sandip","Bangalore");
+	
+	
+Hashtable<Integer,Student> ts=new Hashtable<Integer,Student>();
+ts.put(1,obj1);
+ts.put(2,obj2);
+ts.put(3,obj3);
+ts.put(4,obj4);
+
+System.out.println(ts);
+}
+}
+---------------------------------------------------------------------------------------------------------
+wap to enter details of some employees.and display it.
+empno,name,salary,designation
+------------------------------------------------------------------------------------------------------------
 
 
 
